@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ABBSNET</title>
+        <title>ABBSNET ТЕСТ</title>
         <meta name="description" content="Быстрый, безопасный и недорогой доступ к сервисам и нейросетям." />
         <meta name="keywords" content="доступ, сервисы, нейросети, безопасный доступ, быстрый доступ, недорогой доступ" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
