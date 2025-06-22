@@ -199,10 +199,6 @@
 
 
 @media (max-width:843px) {
-    .card {
-        margin: auto;
-    }
-
     .howItWorksCard .card:first-child {
         height: fit-content !important;
     }
@@ -224,5 +220,4 @@
         height: auto;
         min-height: auto;
     }
-
 }

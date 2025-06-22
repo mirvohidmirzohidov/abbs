@@ -21,9 +21,9 @@ const ReviewsSection = ({ cards4 }) => {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 1380,
                 settings: {
-                    slidesToShow: Math.min(cards4.length, 2), // 2ta ko'rsatadi
+                    slidesToShow: 2, // 2ta ko'rsatadi
                     infinite: cards4.length > 2,
                 },
             },

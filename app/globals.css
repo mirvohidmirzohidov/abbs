@@ -47,10 +47,9 @@ button {
 
 
 
-@media (max-width:1310px) {
+@media (max-width:1380px) {
   .slick-slider {
-    max-width: 1310px;
-    width: 95%;
+    max-width: 720px;
     padding-left: 50px;
   }
 }
@@ -71,6 +70,6 @@ button {
 @media (max-width:845px) {
   .slick-slider {
     width: 100%;
-    padding-left: 0;
+    padding-left: 5px;
   }
 }
