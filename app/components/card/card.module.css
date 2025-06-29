@@ -13,7 +13,6 @@
     transform: scale(1.02);
 }
 
-
 .card img {
     width: 100%;
 }
@@ -35,9 +34,6 @@
     margin-top: 10px;
 }
 
-
-
-
 .cardInfo {
     font-size: 11px;
     font-weight: 400;
@@ -46,6 +42,12 @@
     padding-top: 13px;
     margin-top: 19px;
     border-top: 2px solid #202020;
+}
+
+.serviceP {
+    font-size: 12.1px;
+    line-height: 17.59px;
+
 }
 
 .card button {
@@ -62,6 +64,12 @@
     font-size: 14px;
     font-weight: 700;
     color: white;
+}
+
+.card .servicesCardBUtton {
+    background-color: #F0F000;
+    margin-top: 8px;
+    color: #1C1C1C;
 }
 
 /* --- howItWorks section --- */
@@ -118,6 +126,10 @@
     border-radius: 15px;
 }
 
+.cardImgWrapperService {
+    width: 98.9651870727539px;
+    height: 98.9651870727539px;
+}
 
 .cardDiscount {
     width: 88px;
@@ -158,13 +170,13 @@
     min-height: 261px;
     padding: 20px;
 }
- 
+
 .reviewsCardImg {
     width: 56px !important;
     height: 56px !important;
     border-radius: 50%;
     object-fit: cover;
-}  
+}
 
 .reviewsCardTop {
     display: flex;
@@ -220,4 +232,5 @@
         height: auto;
         min-height: auto;
     }
+
 }
