@@ -3,8 +3,23 @@ import styles from "../page.module.css"
 import { cards5 } from '../data/cards'
 import Card from '../components/card/Card'
 
+
+export const metadata = {
+    title: 'Наличие сервисов со скидками в AbbsNet',
+    description: "Просмотрите наличие сервисов, которые можно приобрести со скидкой в AbbsNet",
+    keywords: ['доступ', 'сервисы', 'нейросети', 'безопасный доступ', 'быстрый доступ', 'недорогой доступ'],
+    openGraph: {
+        title: 'Наличие сервисов со скидками в AbbsNet',
+        description: 'Просмотрите наличие сервисов, которые можно приобрести со скидкой в AbbsNet',
+        url: 'https://abbsnet.com/services',
+        type: 'website',
+        siteName: 'AbbsNet',
+    },
+}
+
 const ServicesPage = () => {
     return (
+
         <div className={styles.servicesPage}>
             <div className={`${styles.container} container`}>
                 <section className={`${styles.services} ${styles.header}`}>

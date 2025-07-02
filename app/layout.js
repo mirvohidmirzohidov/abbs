@@ -1,35 +1,27 @@
-"use client"
-
-import Footer from "./components/footer";
 import "./globals.css";
-import styles from "./page.module.css"
-import { usePathname } from "next/navigation";
+import ClientWrapper from "./components/ClientWrapper";
+
+export const metadata = {
+  title: 'AbbsNet - Быстрый, безопасный и недорогой доступ к сервисам и нейросетям',
+  description: 'С AbbsNet вы сможете легко экономить до 95% средств на сервисах, без ограничений, блокировок и других проблем.',
+  keywords: ['доступ', 'сервисы', 'нейросети', 'безопасный доступ', 'быстрый доступ', 'недорогой доступ'],
+  openGraph: {
+    title: 'AbbsNet - Быстрый, безопасный и недорогой доступ к сервисам и нейросетям',
+    description: 'С AbbsNet вы сможете легко экономить до 95% средств на сервисах, без ограничений, блокировок и других проблем.',
+    url: 'https://abbsnet.com',
+    type: 'website',
+    siteName: 'AbbsNet',
+  },
+};
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ABBSNET</title>
-        <meta name="description" content="Быстрый, безопасный и недорогой доступ к сервисам и нейросетям." />
-        <meta name="keywords" content="доступ, сервисы, нейросети, безопасный доступ, быстрый доступ, недорогой доступ" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="ru">
       <body>
-        <div className={styles.banner}>
-          <h3><img src="/assets/money.png" alt="" /> Начни экономить от <span>2000₽</span> в месяц уже сегодня!</h3>
-        </div>
-        <div className={styles.headerTop}>
-          <p>Скачать браузер для экономии</p>
-        </div>
-        <main>{children}</main>
-        <Footer className={pathname === "/download" ? styles.footerDownload : ""} />
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
       </body>
     </html>
   );
-}
+} 

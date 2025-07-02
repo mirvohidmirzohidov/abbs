@@ -1,6 +1,19 @@
 import React from 'react'
 import styles from "../page.module.css"
 
+export const metadata = {
+  title: 'AbbsNet – Скачайте единственный браузер для экономии на сервисах и нейросетях.',
+  description: "Скачайте единственный браузер для экономии на сервисах и нейросетях на свои устройства. Доступен только на устройствах Windows и MacOS.",
+  keywords: ['доступ', 'сервисы', 'нейросети', 'безопасный доступ', 'быстрый доступ', 'недорогой доступ'],
+  openGraph: {
+    title: 'AbbsNet – Скачайте единственный браузер для экономии на сервисах и нейросетях.',
+    description: 'Скачайте единственный браузер для экономии на сервисах и нейросетях на свои устройства. Доступен только на устройствах Windows и MacOS.',
+    url: 'https://abbsnet.com/download',
+    type: 'website',
+    siteName: 'AbbsNet',
+  },
+}
+
 const Download = () => {
   return (
     <div className={styles.download}>
@@ -88,7 +101,7 @@ const Download = () => {
           </div>
         </section>
 
-        <section style={{ marginTop: "60px" }}  className={styles.mobileNone}>
+        <section style={{ marginTop: "60px" }} className={styles.mobileNone}>
           <div className={styles.main}>
             <h1>MacOS</h1>
           </div>
