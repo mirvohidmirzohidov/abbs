@@ -17,6 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
+      <head>
+        <meta name="yandex-verification" content="44d2670959a7427a" />
+      </head>
       <body>
         <ClientWrapper>
           {children}
