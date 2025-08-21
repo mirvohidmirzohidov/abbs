@@ -92,7 +92,7 @@ export const cards3 = [
         name: "AdHeart",
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
-        onclick: console.log("")
+        slug: "/services/adHeart"
     },
     {
         width: "80px",
@@ -104,7 +104,7 @@ export const cards3 = [
         name: "ChatGPT",
         title: "Нейросеть",
         info: "ChatGPT — это искусственный интеллект для общения и работы. Он способен понимать и генерировать текст, отвечать на вопросы, помогать с задачами, писать тексты и вести разговоры на различные темы.",
-        onclick: console.log("")
+        slug: "/services/chatgpt"
     },
     {
         width: "62px",
@@ -116,7 +116,7 @@ export const cards3 = [
         name: "Envato Elements",
         title: "Огромный сток материалов",
         info: "Envato — это платформа, которая предоставляет доступ к шаблонам, графике, видео, музыке и другим креативным элементам для дизайнеров, разработчиков и контент-мейкеров, помогая ускорить процесс создания и улучшить качество проектов.",
-        onclick: console.log("")
+        slug: "/services/envato"
     },
     {
         width: "75px",
@@ -128,7 +128,7 @@ export const cards3 = [
         name: "Midjourney",
         title: "Нейросеть",
         info: "Midjourney — это искусственный интеллект для генерации изображений по текстовым описаниям. Он позволяет создавать уникальные визуальные работы, превращая идеи в изображения с помощью простых текстовых команд.",
-        onclick: console.log("")
+        slug: "/services/midjourney"
     },
     {
         width: "64px",
@@ -140,7 +140,7 @@ export const cards3 = [
         name: "Claude AI",
         title: "Нейросеть",
         info: "Claude AI — это искусственный интеллект, разработанный для обработки текста и общения. Он помогает решать задачи, отвечает на вопросы и генерирует текст на основе запросов, обеспечивая эффективную поддержку в различных сферах.",
-        onclick: console.log("")
+        slug: "/services/claude"
     },
     {
         width: "57px",
@@ -152,7 +152,7 @@ export const cards3 = [
         name: "Freepik",
         title: "Фотосток",
         info: "Freepik — это платформа для поиска и скачивания графики, векторных изображений, иконок и шаблонов. Она предоставляет инструменты для дизайнеров, маркетологов и контент-мейкеров, ускоряя процесс создания визуального контента.",
-        onclick: console.log("")
+        slug: "/services/freepik"
     },
     {
         img: "/assets/AI/canva.png",
@@ -162,7 +162,7 @@ export const cards3 = [
         name: "Canva",
         title: "Редактор",
         info: "Canva — онлайн-платформа для создания и редактирования графики, которая предлагает широкий выбор шаблонов, фотографий, иконок и шрифтов. Она идеально подходит для дизайнеров, маркетологов и всех, кто работает с визуальным контентом.",
-        onclick: console.log("")
+        slug: "/services/canva"
     },
     {
         width: "73px",
@@ -174,7 +174,7 @@ export const cards3 = [
         name: "Cap Cut",
         title: "Видеоредактор",
         info: "CapCut — это видеоредактор, который предлагает широкий набор инструментов для создания и редактирования видео. Он позволяет добавлять эффекты, музыку, текст и переходы, идеально подходя для пользователей, создающих контент на мобильных устройствах.",
-        onclick: console.log("")
+        slug: "/services/capcut"
     }
 ]
 
@@ -238,7 +238,8 @@ export const cards5 = [
         name: "ChatGPT",
         title: "Нейросеть",
         info: "ChatGPT — это искусственный интеллект для общения и работы. Он способен понимать и генерировать текст, отвечать на вопросы, помогать с задачами, писать тексты и вести разговоры на различные темы.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/EAB5DZONZDky",
+        slug: "/services/chatgpt"
     },
     {
         width: "75px",
@@ -250,7 +251,8 @@ export const cards5 = [
         name: "Midjourney",
         title: "Нейросеть",
         info: "Midjourney — это искусственный интеллект для генерации изображений по текстовым описаниям. Он позволяет создавать уникальные визуальные работы, превращая идеи в изображения с помощью простых текстовых команд.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/mA1qwx1eN2Uy",
+        slug: "/services/midjourney"
     },
     {
         width: "57px",
@@ -262,7 +264,8 @@ export const cards5 = [
         name: "Freepik",
         title: "Фотосток",
         info: "Freepik — это платформа для поиска и скачивания графики, векторных изображений, иконок и шаблонов. Она предоставляет инструменты для дизайнеров, маркетологов и контент-мейкеров, ускоряя процесс создания визуального контента.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/-t5cD7QvZGVi",
+        slug: "/services/freepik"
     },
     {
         width: "62px",
@@ -274,7 +277,8 @@ export const cards5 = [
         name: "Envato Elements",
         title: "Огромный сток материалов",
         info: "Envato — это платформа, которая предоставляет доступ к шаблонам, графике, видео, музыке и другим креативным элементам для дизайнеров, разработчиков и контент-мейкеров, помогая ускорить процесс создания и улучшить качество проектов.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/pQQtgbSEZTdi",
+        slug: "/services/envato"
     },
     {
         width: "59px",
@@ -286,7 +290,8 @@ export const cards5 = [
         name: "AdHeart",
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/VEHD1N7BMzk6",
+        slug: "/services/adHeart"
     },
     {
         width: "64px",
@@ -298,17 +303,21 @@ export const cards5 = [
         name: "Claude AI",
         title: "Нейросеть",
         info: "Claude AI — это искусственный интеллект, разработанный для обработки текста и общения. Он помогает решать задачи, отвечает на вопросы и генерирует текст на основе запросов, обеспечивая эффективную поддержку в различных сферах.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/OPtFWb2_ODky",
+        slug: "/services/claude"
     },
     {
         img: "/assets/AI/canva.png",
+        width:"98.96px",
         discount: "-70%",
         salePrice: "699₽",
         oldPrice: "7000₽",
         name: "Canva",
         title: "Редактор",
         info: "Canva — онлайн-платформа для создания и редактирования графики, которая предлагает широкий выбор шаблонов, фотографий, иконок и шрифтов. Она идеально подходит для дизайнеров, маркетологов и всех, кто работает с визуальным контентом.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/N24B-G6IMzcy",
+        slug: "/services/canva",
+        padding0: true
     },
     {
         width: "73px",
@@ -317,10 +326,11 @@ export const cards5 = [
         discount: "-70%",
         salePrice: "699₽",
         oldPrice: "7000₽",
-        name: "Cap Cut Pro",
+        name: "CapCut Pro",
         title: "Видеоредактор",
         info: "CapCut — это видеоредактор, который предлагает широкий набор инструментов для создания и редактирования видео. Он позволяет добавлять эффекты, музыку, текст и переходы, идеально подходя для пользователей, создающих контент на мобильных устройствах.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/KuCT_B-_M2Ey",
+        slug: "/services/capcut"
     },
     {
         width: "61px",
@@ -332,7 +342,8 @@ export const cards5 = [
         name: "Leonardo AI",
         title: "Нейросеть",
         info: "Leonardo AI — это мощный искусственный интеллект для создания изображений. Он помогает генерировать графику по описанию, подходит для дизайнеров, художников и креативных проектов, а также легко адаптируется под разные стили и задачи.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/wP_Wdko4YzVi",
+        slug: "/services/leonardo"
     },
     {
         width: "73px",
@@ -344,7 +355,8 @@ export const cards5 = [
         name: "Segmento Target",
         title: "Редактор",
         info: "Segmento Target — это сервис для сбора и анализа аудитории из различных социальных сетей. Он позволяет находить целевые группы, активных участников, подписчиков сообществ и друзей пользователей, формируя базы данных для последующего ретаргетинга и более точной настройки рекламных кампаний.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/kXS06cTXYTBi",
+        slug: "/services/segmento"
     },
     {
         width: "89px",
@@ -356,7 +368,8 @@ export const cards5 = [
         name: "TGstat",
         title: "Телеграм-аналитика",
         info: "TGStat — это мощный инструмент аналитики Telegram. Он позволяет отслеживать статистику каналов, анализировать рост аудитории, активность подписчиков и эффективность публикаций. Подходит для маркетологов, владельцев каналов и SMM-специалистов.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/oPlGBr1dMmEy",
+        slug: "/services/tgstat"
     },
     {
         width: "80px",
@@ -368,10 +381,11 @@ export const cards5 = [
         name: "Supa",
         title: "Видеоредактор",
         info: "Supa.ru — это онлайн-сервис для быстрого создания видео. Подходит для маркетологов, блогеров и SMM-специалистов. Помогает легко делать ролики для соцсетей, рекламы и презентаций без навыков монтажа.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/VEHD1N7BMzk6",
+        slug: "/services/supa"
     },
     {
-        width: "90px",
+        width: "98.96px",
         img: "/assets/AI/semrush.png",
         discount: "-70%",
         salePrice: "699₽",
@@ -379,7 +393,9 @@ export const cards5 = [
         name: "Semrush",
         title: "SEO и PPC",
         info: "Semrush — это многофункциональный сервис для анализа сайтов и продвижения в поиске. Подходит SEO-специалистам, маркетологам и владельцам бизнеса. Помогает находить ключевые слова, отслеживать конкурентов и улучшать позиции в поисковых системах.",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/Ai3-XAbGNWJi",
+        slug: "/services/semrush",
+        padding0: true
     },
     {
         width: "60px",
@@ -391,6 +407,7 @@ export const cards5 = [
         name: "Serpstat",
         title: "SEO и PPC",
         info: "Serpstat — это универсальная платформа для SEO и маркетинга. Подходит специалистам по продвижению, контент-маркетологам и аналитикам.С её помощью можно подбирать ключевые слова, анализировать конкурентов, отслеживать позиции сайта",
-        onclick: console.log("")
+        buyAccess: "https://t.me/m/d-a4wPFyNjYy",
+        slug: "/services/serpstat"
     },
 ]

@@ -8,6 +8,137 @@
    background-size: cover;
  }
 
+ .container {
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+ }
+
+ .navbarWrapper {
+   border-bottom: 1px solid #323233;
+   position: sticky;
+   top: 0;
+   z-index: 999;
+ }
+
+ .navbar {
+   max-width: 1440px;
+   margin: 0 auto;
+   height: 63px;
+   padding: 0 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #090909;
+ }
+
+ .nav_left {
+   width: fit-content;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   user-select: none;
+ }
+
+ .nav_left .logo {
+  width: 67px;
+ }
+
+ .nav_links {
+   margin-left: 90px;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+ }
+
+ .nav_links a {
+   font-size: 14px;
+   font-weight: 700;
+   color: #989899;
+ }
+
+ .nav_links a.active {
+   color: white;
+ }
+
+ .burger_menu {
+   cursor: pointer;
+ }
+
+ .navbar button {
+   width: 163px;
+   height: 39px;
+   background-color: #FFFF00;
+   border: none;
+   border-radius: 8px;
+   font-size: 14px;
+   font-weight: 700;
+   color: #1C1C1C;
+ }
+
+ .menu {
+   width: 20px;
+   position: relative;
+   display: none;
+ }
+
+ .menu svg {
+   cursor: pointer;
+ }
+
+ .menuTop {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .menuItem .menuTop button.close {
+   cursor: pointer;
+   background-color: transparent;
+   border: none;
+   width: auto;
+   margin-top: 0;
+   height: auto;
+ }
+
+ .menu {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+ }
+
+ .burger_menu {
+   display: none;
+ }
+
+ .menuItem {
+   width: 100%;
+   height: 223px;
+   position: absolute;
+   z-index: 900;
+   left: 0;
+   top: 0;
+   background-color: black;
+   padding: 16px 22px 15px 25px;
+   text-align: left;
+ }
+
+ .menu_links {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 15px;
+   margin-top: 28px;
+   z-index: 999;
+   margin-left: -1px;
+ }
+
+ .menuItem button {
+   width: 100%;
+   margin-top: 15px;
+   z-index: 999;
+ }
+
  .banner {
    background-color: var(--colorFFFF00);
    text-align: center;
@@ -15,7 +146,8 @@
    padding-bottom: 8px;
  }
 
- .mainTitle h3 {
+ .mainTitle h3,
+ .mainTitle span {
    color: var(--colorFFFF00);
    font-weight: 700;
    font-size: 16px;
@@ -36,6 +168,7 @@
    font-weight: 600;
    line-height: 54px;
    text-align: center;
+   color: white;
  }
 
  .download .title {
@@ -202,12 +335,16 @@
    font-size: 14px;
    line-height: 16px;
    color: var(--color000);
+   transition: 0.3s ease background;
    z-index: 999;
    border: none;
    position: relative;
    z-index: 2;
  }
 
+ .buttonItem button:hover {
+   background-color: #b6b600;
+ }
 
  .buttonItem::before {
    content: '';
@@ -235,7 +372,7 @@
    }
  }
 
- p.notice {
+ .notice {
    text-align: center;
    font-weight: 800;
    font-size: 14px;
@@ -245,10 +382,16 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 7px;
+   gap: 2px;
+   flex-wrap: wrap;
+   line-height: 1;
  }
 
- p.notice span.yellow {
+ .notice svg {
+   margin-right: 7px;
+ }
+
+ .notice .highlight {
    color: var(--colorFFFF00);
  }
 
@@ -503,6 +646,14 @@
    color: white;
  }
 
+ .reviews .subTitle {
+   font-size: 17px;
+ }
+
+ .reviews .subTitle span {
+   text-decoration: underline;
+ }
+
  .startSaving .buttonItem {
    margin-top: 20px;
  }
@@ -613,7 +764,8 @@
    font-size: 24px;
    font-weight: 600;
    color: white;
-   margin-top: 23px;line-height: 27.6px;
+   margin-top: 23px;
+   line-height: 27.6px;
  }
 
  .download .cardsWrapper .card .subTitle {
@@ -710,9 +862,10 @@
    border-radius: 20px;
    color: #1C1C1C;
  }
-.servicesPage .services{
-  background:none;
-}
+
+ .servicesPage .services {
+   background: none;
+ }
 
  .download .subTitle {
    font-weight: 500;
@@ -742,6 +895,24 @@
 
 
  @media (max-width:834px) {
+   .burger_menu {
+     display: flex;
+   }
+
+   .nav_links,
+   .navbar button {
+     display: none;
+   }
+
+   .menu,
+   .menu button {
+     display: inline-block;
+   }
+
+   .menu .nav_links {
+     display: flex;
+   }
+
    .download {
      padding-left: 20px;
      padding-right: 20px;
@@ -886,7 +1057,6 @@
    .serviceNowFound img {
      display: none;
    }
-
 
    .servicesPage .cardsWrapper {
      gap: 26px;
@@ -1121,6 +1291,10 @@
      margin-top: 60px;
    }
 
+   .faq .subTitle {
+     font-size: 17px;
+   }
+
    .benefitsSection .mainTitle h3,
    .services .mainTitle h3 {
      margin-top: 60px;
@@ -1205,6 +1379,10 @@
    .header .notice {
      font-size: 10.18px;
    }
+
+   .menuItem {
+     width: 280px;
+   }
  }
 
  @media(max-width:350px) {
@@ -1222,5 +1400,46 @@
 
    .servicesPage .cardsWrapper {
      padding: 0;
+   }
+ }
+
+ @media (max-width:700px) {
+   .menuItem {
+     padding-left: 20px;
+   }
+
+   .reviews {
+     text-align: left;
+     padding-top: 0;
+   }
+
+   .reviews .mainTitle h3 {
+     width: 100%;
+     text-align: left;
+   }
+
+   .reviews .title {
+     width: 100%;
+     font-size: 26px;
+     line-height: 34px;
+     text-align: left;
+   }
+
+   .reviews .subTitle {
+     width: 100%;
+     text-align: left;
+   }
+
+   .reviews .buttonItem {
+     max-width: 500px;
+     width: 100%;
+   }
+ }
+
+ @media (max-width:550px) {
+
+   .menuItem {
+     width: 100%;
+     height: 223px;
    }
  }

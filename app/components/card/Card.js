@@ -1,7 +1,15 @@
+"use client"
+
 import React from "react";
 import styles from "./card.module.css";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Card = ({ type, data, servicesPage }) => {
+  const router = useRouter()
+  const pathname = usePathname()
+
+
   if (type === "howItWorks") {
     return (
       <div className={`${styles.card} ${styles.howItWorksCard}`} style={{ maxWidth: data.width ? data.width : "", width: "100%", textAlign: data.textAlign ? "center" : "" }}>
@@ -28,10 +36,10 @@ const Card = ({ type, data, servicesPage }) => {
 
   if (type === "services") {
     return (
-      <div className={`${styles.card} ${styles.servicesCard}`}>
+      <div style={{ minHeight: pathname === '/' ? "390px" : "495px" }} className={`${styles.card} ${styles.servicesCard}`}>
         <div className={styles.cardTop}>
-          <div className={`${styles.cardImgWrapper} ${servicesPage ? styles.cardImgWrapperService : undefined}`} style={{ backgroundColor: data.background }}>
-            <img style={{ width: data.width }} src={data.img} alt="" />
+          <div className={`${data.padding0 ? styles.padding0 : ""} ${styles.cardImgWrapper} ${servicesPage ? styles.cardImgWrapperService : undefined}`} style={{ backgroundColor: data.background }}>
+            <img style={{ width: data.width }} src={data.img} alt={`${data.name} складчина`} />
           </div>
           <div style={{ textAlign: "center" }}>
             <div className={styles.cardDiscount}>{data.discount}</div>
@@ -42,29 +50,39 @@ const Card = ({ type, data, servicesPage }) => {
         <div className={styles.cardTitle}>{data.name}</div>
         <div className={styles.cardText}>{data.title}</div>
         <div className={`${styles.cardInfo} ${servicesPage ? styles.serviceP : undefined}`}>{data.info}</div>
-        <button onClick={data.onclick}>
-          Ознакомиться детальнее
+        <div className={styles.buttonsWrapper}>
+          {data.slug && (
+            <Link href={data.slug} prefetch>
+              <button className={styles.servicesCard_button}>
+                Ознакомиться детальнее
+                {
+                  !servicesPage && (
+                    <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.5 1L8.83744 7.84828C8.9243 7.92935 8.92175 8.06782 8.83197 8.14563L1.5 14.5"
+                        stroke="white" strokeWidth="2" strokeLinecap="round" />
+                    </svg>
+                  )
+                }
+              </button>
+            </Link>
+          )}
           {
-            !servicesPage && <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 1L8.83744 7.84828C8.9243 7.92935 8.92175 8.06782 8.83197 8.14563L1.5 14.5" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            </svg>
+            servicesPage && <Link href={data.buyAccess}><button className={styles.servicesCardBUtton}>Приобрести сервис</button></Link>
           }
-        </button>
-        {
-          servicesPage && <button className={styles.servicesCardBUtton}>Приобрести сервис</button>
-        }
+        </div>
       </div >
     );
   }
 
   if (type === "reviews") {
     return (
-      <div className={`${styles.card} ${styles.reviewsCard} reviewsCard`}>
+      <div style={{ minHeight: "261px" }} className={`${styles.card} ${styles.reviewsCard} reviewsCard`}>
         <div className={styles.reviewsCardTop}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <img className={styles.reviewsCardImg} src={data.image} alt="" />
             <div>
-              <h3>{data.name}</h3>
+              <p className={styles.name} style={{ color: "white" }}>{data.name}</p>
               <p className={styles.cardText1}>Telegram</p>
             </div>
           </div>

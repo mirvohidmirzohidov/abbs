@@ -7,7 +7,7 @@ import Card from './components/card/Card';
 import Accordion from './components/accordion/Accordion';
 import { ReviewsSection } from './components/carouselCard';
 import { useState } from 'react';
-import Footer from './components/footer';
+import Link from 'next/link';
 
 export default function HomePage() {
   const [openModal, setOPenModal] = useState(false)
@@ -53,13 +53,13 @@ export default function HomePage() {
                 <h4>Большой ассортимент</h4></div>
             </div>
             <div className={styles.buttonItem}>
-              <button >Посмотреть ассортимент</button>
+              <Link href={'/services'}><button>Посмотреть ассортимент</button></Link>
             </div>
-            <p className={styles.notice}>
+            <div className={styles.notice}>
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.8755 4.6875H8.46612L10.463 0.884766C10.6505 0.439453 10.1114 0 9.3755 0H2.6255C2.063 0 1.58487 0.260742 1.50987 0.609375L0.00987083 7.64062C-0.0791917 8.0625 0.445808 8.4375 1.1255 8.4375H6.68956L4.52862 14.1357C4.35987 14.5811 4.90362 15 5.62081 15C6.01456 15 6.38956 14.8711 6.59581 14.6484L14.8458 5.74219C15.2817 5.27637 14.7427 4.6875 13.8755 4.6875Z" fill="#FFFF00" />
               </svg>
-              <span>Больше 20</span> сервисов и нейросетей <span>в наличии</span></p>
+              <span className={styles.highlight}>Больше</span> <span className={styles.highlight}>20</span> <span>сервисов</span> <span>и</span> <span>нейросетей</span> <span className={styles.highlight}>в</span> <span className={styles.highlight}>наличии</span></div>
           </div>
         </div>
 
@@ -144,7 +144,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className={styles.buttonItem}>
-            <button>Посмотреть весь ассортимент</button>
+            <Link href={'/services'}>
+              <button>Посмотреть весь ассортимент</button>
+            </Link>
           </div>
         </section>
 
@@ -157,10 +159,12 @@ export default function HomePage() {
           </div>
           <div className={styles.title}>Вопросы и ответы</div>
           <div className={styles.subTitle}>Остались вопросы? Напишите нам в Telegram — мы ответим в течение нескольких минут.</div>
-          <a href="" target='_blank' className={styles.tg_link}>Написать в Telegram</a>
+          <a href="https://t.me/m/jidwlHXNNDFi" target='_blank' className={`${styles.tg_link} click`}>Написать в Telegram</a>
           <Accordion />
           <div className={styles.buttonItem}>
-            <button>Приобрести доступ</button>
+            <Link href={'https://t.me/m/EAB5DZONZDky'}>
+              <button>Приобрести доступ</button>
+            </Link>
           </div>
         </section>
 
@@ -176,7 +180,9 @@ export default function HomePage() {
             </h1>
           </div>
           <div className={styles.buttonItem}>
-            <button>Приобрести доступ</button>
+            <Link href={'https://t.me/m/EAB5DZONZDky'}>
+              <button>Приобрести доступ</button>
+            </Link>
           </div>
         </section>
       </div>
