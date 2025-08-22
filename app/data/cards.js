@@ -92,7 +92,7 @@ export const cards3 = [
         name: "AdHeart",
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
-        slug: "/services/adHeart"
+        slug: "/services/adheart"
     },
     {
         width: "80px",
@@ -291,7 +291,7 @@ export const cards5 = [
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
         buyAccess: "https://t.me/m/VEHD1N7BMzk6",
-        slug: "/services/adHeart"
+        slug: "/services/adheart"
     },
     {
         width: "64px",
