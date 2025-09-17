@@ -387,9 +387,9 @@ export const cards5 = [
     {
         width: "98.96px",
         img: "/assets/AI/semrush.png",
-        discount: "-70%",
-        salePrice: "***₽",
-        oldPrice: "7000₽",
+        discount: "-95%",
+        salePrice: "500₽",
+        oldPrice: "10.500₽",
         name: "Semrush",
         title: "SEO и PPC",
         info: "Semrush — это многофункциональный сервис для анализа сайтов и продвижения в поиске. Подходит SEO-специалистам, маркетологам и владельцам бизнеса. Помогает находить ключевые слова, отслеживать конкурентов и улучшать позиции в поисковых системах.",
@@ -412,6 +412,7 @@ export const cards5 = [
     },
 
 ]
+
 
 
 
