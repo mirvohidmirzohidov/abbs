@@ -85,7 +85,7 @@ const Page = () => {
                 <img style={{ width: "85%" }} src={"/assets/icons/midjourney.svg"} alt={`chatgpt складчина`} />
               </div>
               <div>
-                <div className={styles.discount}><span>-70%</span></div>
+                <div className={styles.discount}><span>-87%</span></div>
                 <p className={styles.price}>670₽</p>
                 <p className={styles.oldPrice}>5300₽</p>
               </div>
@@ -138,7 +138,7 @@ const Page = () => {
             </div>
             <div className={styles.section_right}>
               <div className={styles.section_right_top}>
-                <div className={styles.discount}>-70%</div>
+                <div className={styles.discount}>-87%</div>
                 <p className={styles.price}>670₽ <span>/ месяц</span></p>
                 <p className={styles.oldPrice}>5300₽</p>
               </div>
@@ -309,3 +309,4 @@ const Page = () => {
 
 
 export default Page
+
