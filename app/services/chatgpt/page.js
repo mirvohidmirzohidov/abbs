@@ -84,9 +84,9 @@ const Page = () => {
                 <img style={{ width: "85%" }} src="/assets/icons/chatgpt.svg" alt={`chatgpt складчина`} />
               </div>
               <div>
-                <div className={styles.discount}><span>-70%</span></div>
-                <p className={styles.price}>699₽</p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <div className={styles.discount}><span>-80%</span></div>
+                <p className={styles.price}>710₽</p>
+                <p className={styles.oldPrice}>3200₽</p>
               </div>
             </div>
             <h1>Купить ChatGPT Premium аккаунт. Полноценный доступ к подписке</h1>
@@ -308,3 +308,4 @@ const Page = () => {
 
 
 export default Page
+
