@@ -137,9 +137,9 @@ const Page = () => {
             </div>
             <div className={styles.section_right}>
               <div className={styles.section_right_top}>
-                <div className={styles.discount}>-70%</div>
-                <p className={styles.price}>699₽ <span>/ месяц</span></p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <div className={styles.discount}>-80%</div>
+                <p className={styles.price}>710₽ <span>/ месяц</span></p>
+                <p className={styles.oldPrice}>3200₽</p>
               </div>
               <div className={styles.content}>
                 <div className={styles.info}>
@@ -308,4 +308,5 @@ const Page = () => {
 
 
 export default Page
+
 
