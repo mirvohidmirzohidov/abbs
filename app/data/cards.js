@@ -86,9 +86,9 @@ export const cards3 = [
         width: "59px",
         img: "/assets/AI/adHeart.png",
         background: "#FFC300",
-        discount: "-70%",
-        salePrice: "699₽",
-        oldPrice: "7000₽",
+        discount: "-90%",
+        salePrice: "670₽",
+        oldPrice: "7600₽",
         name: "AdHeart",
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
@@ -410,4 +410,5 @@ export const cards5 = [
         buyAccess: "https://t.me/m/d-a4wPFyNjYy",
         slug: "/services/serpstat"
     },
+
 ]
