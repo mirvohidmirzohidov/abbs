@@ -59,9 +59,9 @@ const Page = () => {
             <div className={styles.section_right}>
               <div style={{ gap: "5px" }} className={styles.flex}>
                 <div>
-                  <div className={styles.discount}><span>-70%</span></div>
-                  <p className={styles.price}>699₽</p>
-                  <p className={styles.oldPrice}>7000₽</p>
+                  <div className={styles.discount}><span>-95%</span></div>
+                  <p className={styles.price}>500₽</p>
+                  <p className={styles.oldPrice}>10,500₽</p>
                 </div>
                 <div className={styles.imgWrapper}>
                   <img style={{ width: "100%" }} src="/assets/icons/semrush.svg" alt={`Semrush складчина`} />
@@ -85,9 +85,9 @@ const Page = () => {
                 <img style={{ width: "152px" }} src="/assets/icons/semrush.svg" alt={`Semrush складчина`} />
               </div>
               <div>
-                <div className={styles.discount}><span>-70%</span></div>
-                <p className={styles.price}>699₽</p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <div className={styles.discount}><span>-95%</span></div>
+                <p className={styles.price}>500₽</p>
+                <p className={styles.oldPrice}>10,500₽</p>
               </div>
             </div>
             <h1>Купить Semrush аккаунт. олноценный доступ к подписке</h1>
@@ -138,9 +138,9 @@ const Page = () => {
             </div>
             <div className={styles.section_right}>
               <div className={styles.section_right_top}>
-                <div className={styles.discount}>-70%</div>
-                <p className={styles.price}>699₽ <span>/ месяц</span></p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <div className={styles.discount}>-95%</div>
+                <p className={styles.price}>500₽ <span>/ месяц</span></p>
+                <p className={styles.oldPrice}>10,500₽</p>
               </div>
               <div className={styles.content}>
                 <div className={styles.info}>
@@ -310,5 +310,6 @@ const Page = () => {
     </>
   )
 }
+
 
 export default Page
