@@ -59,9 +59,9 @@ const Page = () => {
             <div className={styles.section_right}>
               <div style={{ gap: "5px" }} className={styles.flex}>
                 <div>
-                  <div className={styles.discount}><span>-70%</span></div>
-                  <p className={styles.price}>699₽</p>
-                  <p className={styles.oldPrice}>7000₽</p>
+                  <div className={styles.discount}><span>-87%</span></div>
+                  <p className={styles.price}>670₽</p>
+                  <p className={styles.oldPrice}>5300₽</p>
                 </div>
                 <div style={{ backgroundColor: "white" }} className={styles.imgWrapper}>
                   <img style={{ width: "85%" }} src={"/assets/icons/midjourney.svg"} alt={`chatgpt складчина`} />
@@ -86,8 +86,8 @@ const Page = () => {
               </div>
               <div>
                 <div className={styles.discount}><span>-70%</span></div>
-                <p className={styles.price}>699₽</p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <p className={styles.price}>670₽</p>
+                <p className={styles.oldPrice}>5300₽</p>
               </div>
             </div>
             <h1 aria-hidden="true">Купить Midjourney Premium аккаунт. Полноценный доступ к подписке</h1>
@@ -139,8 +139,8 @@ const Page = () => {
             <div className={styles.section_right}>
               <div className={styles.section_right_top}>
                 <div className={styles.discount}>-70%</div>
-                <p className={styles.price}>699₽ <span>/ месяц</span></p>
-                <p className={styles.oldPrice}>7000₽</p>
+                <p className={styles.price}>670₽ <span>/ месяц</span></p>
+                <p className={styles.oldPrice}>5300₽</p>
               </div>
               <div className={styles.content}>
                 <div className={styles.info}>
@@ -306,5 +306,6 @@ const Page = () => {
     </>
   )
 }
+
 
 export default Page
