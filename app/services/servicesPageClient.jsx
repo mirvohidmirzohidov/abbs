@@ -19,7 +19,9 @@ export default function ServicesPageClient() {
                     </div>
                     <div className={styles.subTitle}>Всё, что нужно для работы, креатива и жизни — в одном месте. AbbsNet подойдёт  всем — от опытных digital-специалистов до новичков и простых пользователей.</div>
                     <div className={styles.buttonItem}>
+                    <a href="https://www.youtube.com/embed/qBupou26ZMw?si=iUDCMF5a72UZu2WE">
                         <button>Как работает AbbsNet?</button>
+                    </a>
                     </div>
                     <p style={{ marginBottom: "30px" }} className={styles.notice}>
                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,3 +52,4 @@ export default function ServicesPageClient() {
         </div>
     );
 }
+
