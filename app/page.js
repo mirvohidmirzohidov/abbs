@@ -95,7 +95,7 @@ export default function HomePage() {
               >
                 <div className={`${styles.modalItem} ${!openModal ? styles.modalHide : styles.modalShow}`}>
                   <div className={styles.closeButton}>X</div>
-                  <iframe width="100%" height="100%" src="https://youtu.be/qBupou26ZMw?si=rBcn5oc0hndtuLIT" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qBupou26ZMw?si=Som53yBjAKb79J7a" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
               </div>
             )
