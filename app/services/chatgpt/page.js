@@ -178,7 +178,9 @@ const Page = () => {
                     <p className={styles.subtitle}>Доступ к ChatGPT предоставляется через наш браузер AbbsNet.
                       Детальнее ознакомиться с тем, зачем он нужен и как работает Вы можете на нашей <Link style={{ color: "#989899" }} href={"/"}><span>главной странице</span></Link> или посмотрев видео-обзор по кнопке ниже.</p>
                     <div className={styles.buttonItem}>
+                      <a href="https://youtu.be/EyVaL-Q63og?si=LfAv61seCSWC2lD2">
                       <button>Как работает аккаунт ChatGPT в AbbsNet?</button>
+                       </a>
                     </div>
                     <p className={styles.text}>
                       <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -308,6 +310,7 @@ const Page = () => {
 
 
 export default Page
+
 
 
 
