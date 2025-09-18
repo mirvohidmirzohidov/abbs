@@ -173,7 +173,9 @@ const Page = () => {
               <p className={styles.subtitle}>Доступ к Segmento предоставляется через наш браузер AbbsNet.
                 Детальнее ознакомиться с тем, зачем он нужен и как работает Вы можете на нашей <Link style={{ color: "#989899" }} href={"/"}><span>главной странице</span></Link> или посмотрев видео-обзор по кнопке ниже.</p>
               <div className={styles.buttonItem}>
-                <button>Как работает аккаунт Segmento в AbbsNet?</button>
+                 <a href="https://youtu.be/qExVsp0asM8?si=vjoRhSY4mVbvjY4V">
+                      <button>Как работает аккаунт Segmento Target в AbbsNet?</button>
+                       </a>
               </div>
               <p className={styles.text}>
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +289,7 @@ const Page = () => {
             >
               <div className={`${styles.modalItem} ${!openModal ? styles.modalHide : styles.modalShow}`}>
                 <div className={styles.closeButton}>X</div>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x2s_Y5ON-ms?si=jkZGHLiAMBBdmwpk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qExVsp0asM8?si=yKgUcS8npA8x6egW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
             </div>
           )
@@ -299,3 +301,4 @@ const Page = () => {
 
 
 export default Page
+
