@@ -297,7 +297,7 @@ const Page = () => {
             >
               <div className={`${styles.modalItem} ${!openModal ? styles.modalHide : styles.modalShow}`}>
                 <div className={styles.closeButton}>X</div>
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x2s_Y5ON-ms?si=jkZGHLiAMBBdmwpk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OThMzxjNtvM?si=C2p2B036RxHIWpxj" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               </div>
             </div>
           )
@@ -309,3 +309,4 @@ const Page = () => {
 
 
 export default Page
+
