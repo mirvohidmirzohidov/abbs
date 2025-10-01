@@ -5,6 +5,9 @@ import styles from "../page.module.css";
 import Footer from "./footer";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import LoginModal from "./Modal/LoginModal";
+import RegisterModal from "./Modal/RegisterModal";
+import PasswordResetModal from "./Modal/PasswordResetModal";
 
 import { Inter } from 'next/font/google'
 
@@ -23,25 +26,12 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
         setOpenMenu(false)
     }, [pathname])
 
-    // useEffect(() => {
-    //     const handler = (e: MouseEvent) => {
-    //         const target = e.target as HTMLElement
-    //         if (target instanceof HTMLButtonElement || target.classList.contains("click")) {
-    //             if (e.button === 1) {
-    //                 e.preventDefault()
-    //                 target.click()
-    //             }
-    //         }
-    //     }
+    const [modalType, setModalType] = useState(null);
 
-    //     document.addEventListener("mouseup", handler)
-
-    //     return () => {
-    //         document.removeEventListener("mouseup", handler)
-    //     }
-    // }, [])
-
-
+    const openLoginModal = () => setModalType('login');
+    const openRegisterModal = () => setModalType('register');
+    const openPasswordResetModal = () => setModalType('passwordReset');
+    const closeModal = () => setModalType(null);
 
 
     return (
@@ -76,8 +66,8 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                         </Link>
                     </div>
                     <div className={styles.authButtons}>
-                        <button >Вход</button>
-                        <button >Регистрация</button>
+                        <button onClick={openLoginModal}>Вход</button>
+                        <button onClick={openRegisterModal}>Регистрация</button>
                     </div>
                     <div className={styles.burger_menu}>
                         <svg onClick={() => setOpenMenu(true)} width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,8 +95,8 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                         <Link href={"/download"}>Скачать приложение</Link>
                                     </div>
                                     <div className={styles.authButtons}>
-                                        <button >Вход</button>
-                                        <button >Регистрация</button>
+                                        <button onClick={openLoginModal} >Вход</button>
+                                        <button onClick={openRegisterModal}>Регистрация</button>
                                     </div>
                                 </div>
                             ) : ""
@@ -115,7 +105,12 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                 </nav>
             </div>
             <main className={inter.className}>{children}</main>
+
             <Footer className={`${pathname === "/download" ? styles.footerDownload : ""} ${inter.className}`} />
+
+            {modalType === 'login' && <LoginModal onClose={closeModal} />}
+            {modalType === 'register' && <RegisterModal onClose={closeModal} />}
+            {modalType === 'passwordReset' && <PasswordResetModal onClose={closeModal} />}
         </>
     );
 }
