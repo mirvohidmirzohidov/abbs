@@ -93,7 +93,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                     </div>
                                     <div className={styles.control_menu_item}>
                                         <Link href="/profile/control-panel"><img src="/assets/icons/control.svg" alt="control icon" /> Панель управления подписками</Link>
-                                        <Link href="/profile/control-panel" onClick={() => localStorage.setItem("openServicesModal", true)}>
+                                        <Link href="/profile/control-panel" onClick={() => localStorage.setItem("openServicesModal", "true")}>
                                             <img src="/assets/icons/cart.svg" alt="cart icon" /> Купить сервис
                                         </Link>
                                     </div>
