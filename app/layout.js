@@ -1,6 +1,5 @@
+import ClientWrapper from "./components/ClientWrapper";
 import "./globals.css";
-import dynamic from "next/dynamic";
-const ClientWrapper = dynamic(() => import("./components/ClientWrapper"), { ssr: false });
 
 export const metadata = {
   title: 'AbbsNet - Быстрый, безопасный и недорогой доступ к сервисам и нейросетям',
