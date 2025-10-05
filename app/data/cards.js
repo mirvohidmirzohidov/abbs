@@ -239,7 +239,8 @@ export const cards5 = [
         title: "Нейросеть",
         info: "ChatGPT — это искусственный интеллект для общения и работы. Он способен понимать и генерировать текст, отвечать на вопросы, помогать с задачами, писать тексты и вести разговоры на различные темы.",
         buyAccess: "https://t.me/m/EAB5DZONZDky",
-        slug: "/services/chatgpt"
+        slug: "/services/chatgpt",
+        category: "Нейросети"
     },
     {
         width: "75px",
@@ -252,7 +253,8 @@ export const cards5 = [
         title: "Нейросеть",
         info: "Midjourney — это искусственный интеллект для генерации изображений по текстовым описаниям. Он позволяет создавать уникальные визуальные работы, превращая идеи в изображения с помощью простых текстовых команд.",
         buyAccess: "https://t.me/m/mA1qwx1eN2Uy",
-        slug: "/services/midjourney"
+        slug: "/services/midjourney",
+        category: "Нейросети"
     },
     {
         width: "57px",
@@ -265,7 +267,8 @@ export const cards5 = [
         title: "Фотосток",
         info: "Freepik — это платформа для поиска и скачивания графики, векторных изображений, иконок и шаблонов. Она предоставляет инструменты для дизайнеров, маркетологов и контент-мейкеров, ускоряя процесс создания визуального контента.",
         buyAccess: "https://t.me/m/-t5cD7QvZGVi",
-        slug: "/services/freepik"
+        slug: "/services/freepik",
+        category: "Дизайн"
     },
     {
         width: "62px",
@@ -278,7 +281,8 @@ export const cards5 = [
         title: "Огромный сток материалов",
         info: "Envato — это платформа, которая предоставляет доступ к шаблонам, графике, видео, музыке и другим креативным элементам для дизайнеров, разработчиков и контент-мейкеров, помогая ускорить процесс создания и улучшить качество проектов.",
         buyAccess: "https://t.me/m/pQQtgbSEZTdi",
-        slug: "/services/envato"
+        slug: "/services/envato",
+        category: "Дизайн"
     },
     {
         width: "59px",
@@ -291,7 +295,8 @@ export const cards5 = [
         title: "Spy-сервис",
         info: "Adheart — это сервис для анализа рекламы в Facebook и Instagram. Он предоставляет большую базу креативов, помогает находить идеи, изучать рекламу конкурентов и запускать эффективные объявления быстрее.",
         buyAccess: "https://t.me/m/VEHD1N7BMzk6",
-        slug: "/services/adheart"
+        slug: "/services/adheart",
+        category: "Spy-сервисы"
     },
     {
         width: "64px",
@@ -304,11 +309,12 @@ export const cards5 = [
         title: "Нейросеть",
         info: "Claude AI — это искусственный интеллект, разработанный для обработки текста и общения. Он помогает решать задачи, отвечает на вопросы и генерирует текст на основе запросов, обеспечивая эффективную поддержку в различных сферах.",
         buyAccess: "https://t.me/m/OPtFWb2_ODky",
-        slug: "/services/claude"
+        slug: "/services/claude",
+        category: "Нейросети"
     },
     {
         img: "/assets/AI/canva.png",
-        width:"98.96px",
+        width: "98.96px",
         discount: "-65%",
         salePrice: "500₽",
         oldPrice: "1300₽",
@@ -317,7 +323,8 @@ export const cards5 = [
         info: "Canva — онлайн-платформа для создания и редактирования графики, которая предлагает широкий выбор шаблонов, фотографий, иконок и шрифтов. Она идеально подходит для дизайнеров, маркетологов и всех, кто работает с визуальным контентом.",
         buyAccess: "https://t.me/m/N24B-G6IMzcy",
         slug: "/services/canva",
-        padding0: true
+        padding0: true,
+        category: "Дизайн"
     },
     {
         width: "73px",
@@ -330,7 +337,8 @@ export const cards5 = [
         title: "Видеоредактор",
         info: "CapCut — это видеоредактор, который предлагает широкий набор инструментов для создания и редактирования видео. Он позволяет добавлять эффекты, музыку, текст и переходы, идеально подходя для пользователей, создающих контент на мобильных устройствах.",
         buyAccess: "https://t.me/m/KuCT_B-_M2Ey",
-        slug: "/services/capcut"
+        slug: "/services/capcut",
+        category: "Видеоредакторы"
     },
     {
         width: "61px",
@@ -343,7 +351,8 @@ export const cards5 = [
         title: "Нейросеть",
         info: "Leonardo AI — это мощный искусственный интеллект для создания изображений. Он помогает генерировать графику по описанию, подходит для дизайнеров, художников и креативных проектов, а также легко адаптируется под разные стили и задачи.",
         buyAccess: "https://t.me/m/wP_Wdko4YzVi",
-        slug: "/services/leonardo"
+        slug: "/services/leonardo",
+        category: "Нейросети"
     },
     {
         width: "73px",
@@ -356,7 +365,8 @@ export const cards5 = [
         title: "Редактор",
         info: "Segmento Target — это сервис для сбора и анализа аудитории из различных социальных сетей. Он позволяет находить целевые группы, активных участников, подписчиков сообществ и друзей пользователей, формируя базы данных для последующего ретаргетинга и более точной настройки рекламных кампаний.",
         buyAccess: "https://t.me/m/kXS06cTXYTBi",
-        slug: "/services/segmento"
+        slug: "/services/segmento",
+        category: "Парсеры"
     },
     {
         width: "89px",
@@ -369,7 +379,8 @@ export const cards5 = [
         title: "Телеграм-аналитика",
         info: "TGStat — это мощный инструмент аналитики Telegram. Он позволяет отслеживать статистику каналов, анализировать рост аудитории, активность подписчиков и эффективность публикаций. Подходит для маркетологов, владельцев каналов и SMM-специалистов.",
         buyAccess: "https://t.me/m/oPlGBr1dMmEy",
-        slug: "/services/tgstat"
+        slug: "/services/tgstat",
+        category: "Telegram-админам"
     },
     {
         width: "80px",
@@ -382,7 +393,8 @@ export const cards5 = [
         title: "Видеоредактор",
         info: "Supa.ru — это онлайн-сервис для быстрого создания видео. Подходит для маркетологов, блогеров и SMM-специалистов. Помогает легко делать ролики для соцсетей, рекламы и презентаций без навыков монтажа.",
         buyAccess: "https://t.me/m/VEHD1N7BMzk6",
-        slug: "/services/supa"
+        slug: "/services/supa",
+        category: "Дизайн"
     },
     {
         width: "98.96px",
@@ -395,7 +407,8 @@ export const cards5 = [
         info: "Semrush — это многофункциональный сервис для анализа сайтов и продвижения в поиске. Подходит SEO-специалистам, маркетологам и владельцам бизнеса. Помогает находить ключевые слова, отслеживать конкурентов и улучшать позиции в поисковых системах.",
         buyAccess: "https://t.me/m/Ai3-XAbGNWJi",
         slug: "/services/semrush",
-        padding0: true
+        padding0: true,
+        category: "SEO и PPC"
     },
     {
         width: "60px",
@@ -408,7 +421,8 @@ export const cards5 = [
         title: "SEO и PPC",
         info: "Serpstat — это универсальная платформа для SEO и маркетинга. Подходит специалистам по продвижению, контент-маркетологам и аналитикам.С её помощью можно подбирать ключевые слова, анализировать конкурентов, отслеживать позиции сайта",
         buyAccess: "https://t.me/m/d-a4wPFyNjYy",
-        slug: "/services/serpstat"
+        slug: "/services/serpstat",
+        category: "SEO и PPC"
     },
 
 ]

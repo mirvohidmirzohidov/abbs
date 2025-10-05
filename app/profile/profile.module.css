@@ -1,0 +1,543 @@
+.layout {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: calc(100vh - 64px);
+    display: flex;
+    gap: 22px;
+    padding: 11px 10px;
+    overflow: hidden;
+}
+
+.left {
+    min-width: 287px;
+    max-width: 287px;
+    height: 100%;
+    background: linear-gradient(169.35deg, #15140D 7.91%, #000000 117.41%);
+    border: 1px solid #171717;
+    border-radius: 16px;
+    position: relative;
+    padding: 17px 13px;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: -11px;
+    width: 2px;
+    bottom: -11px;
+    background-color: #323233;
+}
+
+.left .top .name {
+    width: 100%;
+    height: 46px;
+    background-color: #1A1A1A;
+    border: 1px solid #252525;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    gap: 10px;
+    color: white;
+}
+
+.left .top .name span {
+    width: 30px;
+    height: 30px;
+    border-radius: 5.22px;
+    background-color: #252525;
+    border: 0.79px solid #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.left .top .name p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.25px;
+    text-transform: capitalize;
+}
+
+.left .top .settins_button {
+    background-color: #1A1A1A;
+    border: 1.28px solid #252525;
+    color: white;
+}
+
+.left .top button {
+    width: 100%;
+    height: 46px;
+    margin-top: 10px;
+    padding-left: 20px;
+    background-color: #E4EB24;
+    border: 1px solid #252525;
+    display: flex;
+    align-items: center;
+    gap: 15.65px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.left .top button img {
+    width: 20px;
+}
+
+.left .bottom {
+    margin-top: 25px;
+}
+
+.left .bottom h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    color: white;
+    padding-left: 15px;
+}
+
+.left .bottom .links {
+    height: 410px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.left .bottom .links button {
+    width: 100%;
+    height: 46px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease background;
+}
+
+.left .bottom .links button.active {
+    border: 1px solid #F7FF00;
+}
+
+.left .bottom .links button:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.left .bottom .links button:last-child {
+    margin-top: auto;
+}
+
+.right {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(137.01deg, #16150E 0.62%, #000000 75.86%);
+    border: 1px solid #171717;
+    border-radius: 16px;
+    overflow: auto;
+}
+
+.right::-webkit-scrollbar {
+    display: none;
+}
+
+.control_panel {
+    width: 100%;
+    padding: 27px 12px;
+    display: flex;
+    gap: 23px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.buy_service {
+    width: 345px;
+    height: 186px;
+    background-color: #141414;
+    border-radius: 28.76px;
+    border: 1.5px dashed #FFFFFF80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #898989;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy_service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+
+.buy_service img {
+    width: 33px;
+}
+
+.buy_service p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.buy_service span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.card {
+    width: 345px;
+    height: 186px;
+    background-color: #262626;
+    border: 1.44px solid #FFFFFF80;
+    border-radius: 28.76px;
+    padding: 16px 22px;
+}
+
+.card .texts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.card .texts h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 100%;
+    color: white;
+}
+
+.card .texts p {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.card .texts span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #00C287;
+    text-align: center;
+}
+
+.card button {
+    width: 100%;
+    height: 47.28px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    border: none;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #1C1C1C;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 0 15px;
+}
+
+.modal_content {
+    width: 341px;
+    background: linear-gradient(170.91deg, #0C0C09 2.63%, #090B0C 93.1%);
+    border: 1px solid #383839;
+    border-radius: 21px;
+    position: relative;
+    padding: 25px;
+}
+
+.modal_top .close_btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal_top p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+}
+
+.modal_top span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7C7D84;
+}
+
+.choose_month {
+    width: 100%;
+    height: 46px;
+    background-color: #151718;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.choose_month .month {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+}
+
+.choose_month .month.active {
+    background-color: #3B3E46;
+}
+
+.card_selection {
+    margin-top: 20px;
+}
+
+.card_selection p {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.cards .card {
+    width: 100%;
+    height: 74px;
+    border: none;
+    background-color: #151718;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.cards .card.active {
+    background-color: #0B0B0A;
+    border: 1px solid #E4EB24;
+}
+
+.cards .card .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards .card p {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.cards .card span {
+    color: #7C7D84;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    margin-top: 0;
+}
+
+.cards .card .icon {
+    width: 66px;
+    height: 35.64px;
+    background-color: #383E43;
+    border-radius: 4.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card.crypto .icon {
+    background-color: transparent;
+    width: 124px;
+    position: relative;
+}
+
+.cards .card.crypto .icon .usdt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+.cards .card.visa .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: transparent;
+    width: 46px;
+}
+
+.cards .card.visa .icon .mastercard {
+    width: 46px;
+    height: 20px;
+    background-color: #383E43;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card.visa .icon .visa {
+    width: 46px;
+    height: 20px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_content label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #7C7D84;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal_content label span {
+    color: #E4EB24;
+}
+
+.modal_content label input {
+    appearance: none;
+    width: 17px;
+    height: 15px;
+    border: 1px solid #E4EB24;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal_content label input:checked {
+    background-color: #E4EB24;
+    position: relative;
+}
+
+.modal_content label input:checked::after {
+    content: "✓";
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal_content button {
+    width: 100%;
+    height: 46px;
+    background-color: #E4EB24;
+    border: none;
+    border-radius: 14px;
+    margin-top: 12px;
+    color: #1C1C1C;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width:700px) {
+    .layout {
+        flex-direction: column;
+        /* gap: 10px; */
+        padding: 0;
+    }
+
+    .left {
+        min-width: 100%;
+        max-width: 100%;
+        height: fit-content;
+        background: transparent;
+        border: none;
+        padding: 20px;
+        padding-top: 10px;
+    }
+
+    .left::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        left: -12px;
+        right: -12px;
+        bottom: 0;
+        width: auto;
+        height: 1px;
+        background-color: #323233;
+    }
+
+    .left .top .name {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .left .bottom {
+        display: none;
+    }
+
+    .right {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+    }
+
+    .control_panel {
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+    }
+}

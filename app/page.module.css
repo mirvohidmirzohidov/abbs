@@ -74,6 +74,11 @@
 
  .burger_menu {
    cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: 9.53px;
+   color: white;
+   position: relative;
  }
 
  .navbar button {
@@ -85,6 +90,104 @@
    font-size: 14px;
    font-weight: 700;
    color: #1C1C1C;
+ }
+
+ .controls {
+   display: flex;
+   gap: 10px;
+   position: relative;
+ }
+
+ .control_button {
+   width: 192px;
+ }
+
+ .name_button {
+   width: 39px !important;
+   background-color: #252525 !important;
+   color: white !important;
+   text-transform: uppercase;
+   font-size: 20px !important;
+   border: 1px solid #313131 !important;
+ }
+
+ .control_menu {
+   width: 278px;
+   position: absolute;
+   right: 0;
+   bottom: -333px;
+   border: 1px solid #323233;
+   background-color: #191919;
+   border-radius: 8px;
+ }
+
+ .control_menu_item {
+   width: 100%;
+   padding: 13px;
+   border-bottom: 1px solid #323233;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   color: white;
+ }
+
+ .control_menu_item:last-child {
+   border-bottom: none;
+ }
+
+ .control_menu_item .name {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+ }
+
+ .control_menu_item .name .left {
+   width: 39px;
+   height: 39px;
+   background-color: #252525;
+   border: 1px solid #313131;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-transform: uppercase;
+   font-size: 20px;
+   font-weight: 700;
+ }
+
+
+ .control_menu_item .name .right {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .control_menu_item .name .right p {
+   font-size: 14px;
+   font-weight: 600;
+   text-transform: capitalize;
+ }
+
+ .control_menu_item .name .right span {
+   font-size: 10px;
+   font-weight: 400;
+   color: #4F4F4F;
+ }
+
+ .control_menu_item a {
+   text-decoration: none;
+   color: white;
+   font-size: 14px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   font-weight: 500;
+   line-height: 16px;
+   cursor: pointer;
+ }
+
+ .control_menu_item:last-child a {
+   color: #FF0000;
  }
 
  .menu {
@@ -146,6 +249,31 @@
    padding-top: 22px;
    text-align: left;
    border-bottom: 1px solid #323233
+ }
+
+ .menuItem .name_button {
+   margin-top: 0;
+ }
+
+ .menuItem .controls {
+   flex-direction: column;
+   border-top: 1px solid #323233;
+   margin-top: 15px;
+   gap: 5px;
+ }
+
+ .menuItem .buttons {
+   height: fit-content;
+   display: flex;
+   align-items: center;
+   gap: 9.53px;
+   margin-top: -8px;
+ }
+
+ .menuItem .controls .name_button {
+   width: 100% !important;
+   margin-top: 0;
+   font-size: 14px !important;
  }
 
  .menu_links {
@@ -925,13 +1053,26 @@
    }
 
    .nav_links,
-   .navbar button {
+   .navbar button,
+   .navbar .controls {
      display: none;
+   }
+
+   .menuItem .control_menu {
+     display: flex;
    }
 
    .menu,
    .menu button {
      display: inline-block;
+   }
+
+   .menu .controls {
+    display: flex;
+   }
+
+   .burger_menu button {
+     display: inline-block !important;
    }
 
    .menu .nav_links {

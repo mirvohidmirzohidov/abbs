@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "AdHeart",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/adHeart.svg"
+    },
+    {
+        "id": 2,
+        "name": "Freepik",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/freepik.svg"
+    },
+    {
+        "id": 3,
+        "name": "Midjourney",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/midjourney.svg"
+    },
+    {
+        "id": 4,
+        "name": "Leonardo Ai",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/leonardo.svg"
+    },
+    {
+        "id": 5,
+        "name": "Claude AI",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/claude.svg"
+    },
+    {
+        "id": 6,
+        "name": "Envato Elements",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/envato.svg"
+    },
+    {
+        "id": 7,
+        "name": "Serpstat",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/serpstat.svg"
+    },
+    {
+        "id": 8,
+        "name": "Supa",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/supa.svg"
+    },
+    {
+        "id": 9,
+        "name": "Canva",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/canva.svg"
+    },
+    {
+        "id": 10,
+        "name": "Segmento Target",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/segmento.svg"
+    },
+    {
+        "id": 11,
+        "name": "ChatGPT",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/chatgpt.svg"
+    },
+    {
+        "id": 12,
+        "name": "Semrush",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/semrush.svg"
+    },
+    {
+        "id": 13,
+        "name": "CapCut",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/capcut.svg"
+    },
+    {
+        "id": 14,
+        "name": "Telemetr",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/telemetr.svg"
+    },
+    {
+        "id": 15,
+        "name": "Tgstat",
+        "access_until": "2023-12-12T23:59:59Z",
+        "daysLeft": 32,
+        "icon": "/assets/services-icons/tgstat.svg"
+    }
+]

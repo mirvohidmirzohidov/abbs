@@ -5,7 +5,7 @@ import styles from "./card.module.css";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
-const Card = ({ type, data, servicesPage }) => {
+const Card = ({ type, data, servicesPage, clickButton }) => {
   const router = useRouter()
   const pathname = usePathname()
 
@@ -68,7 +68,11 @@ const Card = ({ type, data, servicesPage }) => {
             </Link>
           )}
           {
-            servicesPage && <Link href={data.buyAccess}><button className={styles.servicesCardBUtton}>Приобрести сервис</button></Link>
+            servicesPage && <Link href={!clickButton ? data.buyAccess: ""}><button onClick={() => {
+              if (clickButton) {
+                clickButton()
+              }
+            }} className={styles.servicesCardBUtton}>Приобрести сервис</button></Link>
           }
         </div>
       </div >
