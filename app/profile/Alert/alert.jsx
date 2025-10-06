@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import styles from "./alert.module.css";
 import ReactDOM from "react-dom/client";
