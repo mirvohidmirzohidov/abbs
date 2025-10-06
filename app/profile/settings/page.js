@@ -16,7 +16,7 @@ const Settings = () => {
       return
     }
 
-    if (oldPassword !== user.password) {
+    if (oldPassword !== user?.password) {
       alert("Старый пароль введён неверно!")
       return
     }
@@ -26,7 +26,7 @@ const Settings = () => {
 
     const users = JSON.parse(localStorage.getItem("users")) || []
     const updatedUsers = users.map((u) =>
-      u.email === user.email ? updatedUser : u
+      u.email === user?.email ? updatedUser : u
     )
     localStorage.setItem("users", JSON.stringify(updatedUsers))
 

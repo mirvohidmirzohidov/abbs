@@ -14,7 +14,7 @@ export default function ProfileLayout({ children }) {
                 <div className={styles.top}>
                     <div className={styles.name}>
                         <span>{user?.login[0]}</span>
-                        <p>{user.login}</p>
+                        <p>{user?.login}</p>
                     </div>
                     <button onClick={() => router.push("/profile/settings")} className={`${pathname === '/profile/settings' ? styles.active : ""} ${styles.settins_button}`}>
                         <img src="/assets/icons/settings2.svg" alt="settings icon" />

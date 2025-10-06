@@ -3,12 +3,15 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import styles from './Modal.module.css';
+import { useRouter } from 'next/navigation';
 
 const LoginModal = ({ onClose, setModalType }) => {
   const [emailOrLogin, setEmailOrLogin] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter()
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,7 +88,7 @@ const LoginModal = ({ onClose, setModalType }) => {
         </label>
         <span
           className={styles.link}
-          onClick={() => setModalType('passwordReset')}
+          onClick={() => router.push("/reset-password")}
           style={{ cursor: "pointer", color: "#ccc" }}
         >
           Забыли пароль?

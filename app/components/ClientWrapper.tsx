@@ -79,15 +79,15 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                             <button ref={buttonRef} className={styles.name_button} onClick={(e) => {
                                 setOpenControlMenu(prev => !prev)
                                 e.stopPropagation();
-                            }}>{user.login[0]}</button>
+                            }}>{user?.login[0]}</button>
                             {
                                 openControlMenu && <div ref={menuRef} className={styles.control_menu}>
                                     <div className={styles.control_menu_item}>
                                         <div className={styles.name}>
-                                            <div className={styles.left}>{user.login[0]}</div>
+                                            <div className={styles.left}>{user?.login[0]}</div>
                                             <div className={styles.right}>
-                                                <p>{user.login}</p>
-                                                <span>{user.email}</span>
+                                                <p>{user?.login}</p>
+                                                <span>{user?.email}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                                     setOpenControlMenu(prev => !prev)
                                                     setOpenMenu(false)
                                                     e.stopPropagation();
-                                                }}>{user.login[0]}</button>
+                                                }}>{user?.login[0]}</button>
                                             }
                                             <button className={styles.close} onClick={() => setOpenMenu(false)}><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1.73863 0.298302C1.3409 -0.0994341 0.696039 -0.0994341 0.298302 0.298302C-0.0994341 0.696039 -0.0994341 1.3409 0.298302 1.73863L6.05967 7.5L0.298379 13.2613C-0.0993572 13.659 -0.0993576 14.3039 0.298379 14.7016C0.696115 15.0994 1.34097 15.0994 1.73871 14.7016L7.5 8.94033L13.2613 14.7016C13.659 15.0994 14.3039 15.0994 14.7016 14.7016C15.0994 14.3039 15.0994 13.659 14.7016 13.2613L8.94033 7.5L14.7017 1.73864C15.0994 1.3409 15.0994 0.696041 14.7017 0.298304C14.304 -0.0994326 13.6591 -0.0994327 13.2614 0.298304L7.5 6.05967L1.73863 0.298302Z" fill="white" />
@@ -212,8 +212,14 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
             </main>
 
             {
-                pathname.split('/')[1] !== "reset-password" || pathname.split('/')[0] !== "profile" && <Footer className={`${pathname === "/download" ? styles.footerDownload : ""} ${inter.className}`} />
+                pathname.split('/')[1] !== "reset-password" &&
+                pathname.split('/')[1] !== "profile" && (
+                    <Footer
+                        className={`${pathname === "/download" ? styles.footerDownload : ""} ${inter.className}`}
+                    />
+                )
             }
+
 
             {modalType === 'login' && <LoginModal setModalType={setModalType} onClose={closeModal} />}
             {modalType === 'register' && <RegisterModal setModalType={setModalType} onClose={closeModal} />}
