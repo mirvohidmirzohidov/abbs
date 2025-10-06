@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import styles from "./alert.module.css";
 import ReactDOM from "react-dom/client";
-import { AlertIcon, CloseIcon } from "./icon";
+import { AlertIcon, CloseIcon } from "./icon/index";
 
 function Alert({ type, title, message, button, onClose }) {
   let icon, color;
