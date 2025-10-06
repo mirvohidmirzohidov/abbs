@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styles from "./alert.module.css";
 import ReactDOM from "react-dom/client";
 import { AlertIcon, CloseIcon } from "./icon";
@@ -23,16 +23,14 @@ function Alert({ type, title, message, button, onClose }) {
       /\(@([^\)]+)\):\[(https?:\/\/[^\]]+)\]/g,
       `<a 
         href="$2" 
-        target="_blank" 
-        onmouseover="this.style.borderBottom='2px solid ${color}'" 
-        onmouseout="this.style.borderBottom='2px solid transparent'" 
-        onfocus="this.style.borderBottom='2px solid ${color}'" 
-        onblur="this.style.borderBottom='2px solid transparent'"
+        target="_blank"
+        style="border-bottom: 2px solid transparent;"
+        onmouseover="this.style.borderBottom='2px solid ${color}'"
+        onmouseout="this.style.borderBottom='2px solid transparent'"
       >
         @$1
       </a>`
     );
-
     return (
       <p
         className={styles.text}
@@ -94,7 +92,10 @@ function Alert({ type, title, message, button, onClose }) {
   );
 }
 
+// Client-side alert yaratish funktsiyasi
 function createAlert(type, title, message, button) {
+  if (typeof window === "undefined") return; // serverda hech narsa qilmasin
+
   const div = document.createElement("div");
   document.body.appendChild(div);
   document.body.style.overflowY = "hidden";
@@ -120,10 +121,8 @@ function createAlert(type, title, message, button) {
 
 Alert.success = (title, message, button) =>
   createAlert("success", title, message, button);
-
 Alert.warning = (title, message, button) =>
   createAlert("warning", title, message, button);
-
 Alert.error = (title, message, button) =>
   createAlert("error", title, message, button);
 
