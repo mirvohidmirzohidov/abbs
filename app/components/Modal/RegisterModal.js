@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import styles from './Modal.module.css';
 
-const RegisterModal = ({ onClose, setModalType }) => {
+const RegisterModal = ({ onClose, setModalType, setUser }) => {
   const [email, setEmail] = useState('');
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
@@ -62,6 +62,7 @@ const RegisterModal = ({ onClose, setModalType }) => {
 
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("currentUser", JSON.stringify(newUser));
+    setUser(newUser)
     setError(null);
     onClose()
   };

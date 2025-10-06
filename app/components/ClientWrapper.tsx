@@ -20,7 +20,28 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
     const [openMenu, setOpenMenu] = useState(false)
     const [openControlMenu, setOpenControlMenu] = useState(false)
     const router = useRouter()
-    const user = JSON.parse(localStorage.getItem("currentUser"))
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const savedUser = localStorage.getItem("currentUser");
+        if (savedUser) {
+            setUser(JSON.parse(savedUser));
+        }
+
+        const handleStorageChange = () => {
+            const updatedUser = localStorage.getItem("currentUser");
+            setUser(updatedUser ? JSON.parse(updatedUser) : null);
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+        return () => window.removeEventListener("storage", handleStorageChange);
+    }, []);
+
+    useEffect(() => {
+        const handleLogout = () => setUser(null);
+        window.addEventListener("logout", handleLogout);
+        return () => window.removeEventListener("logout", handleLogout);
+    }, []);
 
     const [modalType, setModalType] = useState(null);
 
@@ -107,6 +128,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                     <div className={styles.control_menu_item}>
                                         <Link href="" onClick={() => {
                                             localStorage.removeItem("currentUser")
+                                            setUser(null);
                                             setOpenControlMenu(false)
                                         }}><img src="/assets/icons/logout.svg" alt="logout icon" /> Выйти</Link>
                                     </div>
@@ -151,7 +173,10 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                     <Link href="https://t.me/AbbsNet_support" target="__blank"><img src="/assets/icons/telegram.svg" alt="telegram icon" /> Тех. Поддержка</Link>
                                 </div>
                                 <div className={styles.control_menu_item}>
-                                    <Link href="" onClick={() => localStorage.removeItem("currentUser")}><img src="/assets/icons/logout.svg" alt="logout icon" /> Выйти</Link>
+                                    <Link href="" onClick={() => {
+                                        localStorage.removeItem("currentUser")
+                                        setUser(null);
+                                    }}><img src="/assets/icons/logout.svg" alt="logout icon" /> Выйти</Link>
                                 </div>
                             </div>
                         }
@@ -221,8 +246,8 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
             }
 
 
-            {modalType === 'login' && <LoginModal setModalType={setModalType} onClose={closeModal} />}
-            {modalType === 'register' && <RegisterModal setModalType={setModalType} onClose={closeModal} />}
+            {modalType === 'login' && <LoginModal setModalType={setModalType} onClose={closeModal} setUser={setUser} />}
+            {modalType === 'register' && <RegisterModal setModalType={setModalType} onClose={closeModal} setUser={setUser} />}
         </>
     );
 }

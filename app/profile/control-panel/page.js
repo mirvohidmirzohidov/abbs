@@ -15,13 +15,18 @@ const ControlPanel = () => {
   const [openServicesModal, setOpenServicesModal] = useState(false)
   const [product, setProduct] = useState("")
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(null)
 
-  useEffect(() => {
+useEffect(() => {
+  if (typeof window !== "undefined") {
     setOpenModal(false)
     setOpenServicesModal(false)
-  }, [pathname])
+    const open = localStorage.getItem("openServicesModal")
+    setIsOpen(open)
+  }
+}, [pathname])
 
-  const isOpen = localStorage.getItem("openServicesModal")
+
   useEffect(() => {
     if (isOpen) {
       setOpenServicesModal(true)

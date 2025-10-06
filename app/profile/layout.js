@@ -2,11 +2,19 @@
 
 import { usePathname, useRouter } from "next/navigation"
 import styles from "./profile.module.css"
+import { useEffect, useState } from "react"
 
 export default function ProfileLayout({ children }) {
-    const user = JSON.parse(localStorage.getItem("currentUser"))
     const pathname = usePathname()
     const router = useRouter()
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        const savedUser = localStorage.getItem("currentUser")
+        if (savedUser) {
+            setUser(JSON.parse(savedUser))
+        }
+    }, [])
 
     return (
         <div className={styles.layout}>
@@ -42,6 +50,7 @@ export default function ProfileLayout({ children }) {
                         <button onClick={() => {
                             localStorage.removeItem("currentUser")
                             router.push("/")
+                            window.dispatchEvent(new Event("logout"));
                         }
                         }>
                             <img src="/assets/icons/logout2.svg" alt="log out icon" />

@@ -1,12 +1,25 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./settings.module.css"
 
 const Settings = () => {
   const [oldPassword, setOldPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
-  const [user, setUser] = useState(() => JSON.parse(localStorage.getItem("currentUser")))
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem("currentUser")
+    if (savedUser) setUser(JSON.parse(savedUser))
+
+    const handleStorageChange = () => {
+      const updatedUser = localStorage.getItem("currentUser")
+      setUser(updatedUser ? JSON.parse(updatedUser) : null)
+    }
+
+    window.addEventListener("storage", handleStorageChange)
+    return () => window.removeEventListener("storage", handleStorageChange)
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()

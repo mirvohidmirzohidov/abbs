@@ -5,7 +5,7 @@ import Modal from './Modal';
 import styles from './Modal.module.css';
 import { useRouter } from 'next/navigation';
 
-const LoginModal = ({ onClose, setModalType }) => {
+const LoginModal = ({ onClose, setModalType, setUser }) => {
   const [emailOrLogin, setEmailOrLogin] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -40,6 +40,7 @@ const LoginModal = ({ onClose, setModalType }) => {
 
     setError(null);
     localStorage.setItem("currentUser", JSON.stringify(foundUser));
+    setUser(foundUser);
     onClose();
   };
 

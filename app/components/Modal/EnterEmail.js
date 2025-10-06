@@ -1,9 +1,9 @@
 "use client"
 
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Modal from './Modal';
-import styles from './Modal.module.css';
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import Modal from "./Modal";
+import styles from "./Modal.module.css"
 
 const EnterEmail = () => {
     const [email, setEmail] = useState('');
@@ -26,7 +26,16 @@ const EnterEmail = () => {
             return;
         }
 
-        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const usersJSON = localStorage.getItem("users");
+        let users = [];
+        if (usersJSON) {
+            try {
+                users = JSON.parse(usersJSON);
+            } catch (err) {
+                return;
+            }
+        }
+
         const existingUser = users.find(u => u.email === email);
 
         if (!existingUser) {
@@ -35,14 +44,13 @@ const EnterEmail = () => {
         }
 
         localStorage.setItem("resetEmail", email);
-
         setError(null);
         setIsSent(true);
     };
 
     const handleClickButton = () => {
-        router.push('/')
-    }
+        router.push('/');
+    };
 
     return (
         <Modal>
