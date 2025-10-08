@@ -70,6 +70,13 @@
    background-color: #252525;
    width: 119px;
    color: #fff;
+   transition: all 0.3s ease;
+ }
+
+ .authButtons button:first-child:hover {
+   transform: scale(1.08);
+   background-color: #333;
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
  }
 
  .burger_menu {
@@ -81,6 +88,12 @@
    position: relative;
  }
 
+ .burger_menu, 
+ .burger_menu button,
+ .burger_menu a {
+  outline: none;
+ }
+
  .navbar button {
    width: 179px;
    height: 39px;
@@ -90,6 +103,12 @@
    font-size: 14px;
    font-weight: 700;
    color: #1C1C1C;
+   transition: all 0.3s ease;
+ }
+
+ .navbar button:hover {
+   transform: scale(1.08);
+   background-color: #fff700;
  }
 
  .controls {
@@ -115,19 +134,20 @@
    width: 278px;
    position: absolute;
    right: 0;
-   bottom: -333px;
+   bottom: -330px;
    border: 1px solid #323233;
    background-color: #191919;
    border-radius: 8px;
+   animation: slideRight 0.4s ease;
  }
 
  .control_menu_item {
    width: 100%;
-   padding: 13px;
+   padding: 10px 13px;
    border-bottom: 1px solid #323233;
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 5px;
    color: white;
  }
 
@@ -184,6 +204,16 @@
    font-weight: 500;
    line-height: 16px;
    cursor: pointer;
+   padding: 5px 1px;
+   border-radius: 5px;
+ }
+
+ .control_menu_item:not(:last-child) a:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ .control_menu_item:last-child a:hover {
+   background-color: rgba(255, 0, 0, 0.2) 
  }
 
  .control_menu_item:last-child a {
@@ -728,6 +758,16 @@
    }
  }
 
+ @keyframes slideRight {
+   from {
+     right: -300px;
+   }
+
+   to {
+     right: 0;
+   }
+ }
+
 
  .cardsWrapper {
    display: flex;
@@ -1068,7 +1108,7 @@
    }
 
    .menu .controls {
-    display: flex;
+     display: flex;
    }
 
    .burger_menu button {

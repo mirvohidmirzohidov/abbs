@@ -18,6 +18,8 @@
     border-radius: 16px;
     position: relative;
     padding: 17px 13px;
+    display: flex;
+    flex-direction: column;
 }
 
 .left::after {
@@ -41,6 +43,7 @@
     padding-left: 15px;
     gap: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .left .top .name span {
@@ -92,6 +95,7 @@
 
 .left .bottom {
     margin-top: 25px;
+    flex: 1;
 }
 
 .left .bottom h3 {
@@ -103,7 +107,7 @@
 }
 
 .left .bottom .links {
-    height: 410px;
+    height: calc(100% - 28px);
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -175,13 +179,6 @@
     transition: all 0.3s ease;
 }
 
-.buy_service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
-    border-color: #fff;
-}
-
-
 .buy_service img {
     width: 33px;
 }
@@ -205,6 +202,14 @@
     border: 1.44px solid #FFFFFF80;
     border-radius: 28.76px;
     padding: 16px 22px;
+    transition: all 0.3s ease;
+}
+
+.buy_service:hover,
+.card:not(.card_selection .card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.15);
+    border-color: #fff;
 }
 
 .card .texts {
@@ -248,6 +253,11 @@
     color: #1C1C1C;
     font-size: 16px;
     font-weight: 600;
+    transition: 0.2s ease transform;
+}
+
+.card button:hover {
+    transform: scale(1.03);
 }
 
 .modal {
@@ -266,6 +276,7 @@
 
 .modal_content {
     width: 341px;
+    height: 546px;
     background: linear-gradient(170.91deg, #0C0C09 2.63%, #090B0C 93.1%);
     border: 1px solid #383839;
     border-radius: 21px;
@@ -468,7 +479,7 @@
 }
 
 .modal_content label input:checked::after {
-    content: "✓";
+    content: "\2714";
     color: black;
     font-size: 14px;
     font-weight: bold;

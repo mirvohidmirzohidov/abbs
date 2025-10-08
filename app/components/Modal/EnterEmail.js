@@ -10,6 +10,7 @@ const EnterEmail = () => {
     const [isSent, setIsSent] = useState(false);
     const [error, setError] = useState(null);
     const router = useRouter();
+    const isMobile = window.innerWidth < 600;
 
     const handleSendEmail = (e) => {
         e.preventDefault();
@@ -53,7 +54,7 @@ const EnterEmail = () => {
     };
 
     return (
-        <Modal>
+        <Modal marginTop={isMobile ? '-100px' : "0"}>
             <h3 style={{ textAlign: 'center', color: '#fff' }}>
                 {isSent ? 'Новый пароль' : 'Восстановление пароля'}
             </h3>

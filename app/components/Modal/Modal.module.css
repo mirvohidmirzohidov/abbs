@@ -1,7 +1,7 @@
 .modal-overlay {
   width: 100%;
   height: calc(100vh - 63px);
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000B2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,7 @@
   max-width: 402px;
   width: 100%;
   position: relative;
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content .title {
@@ -180,7 +181,17 @@
   text-decoration: underline;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
 
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 @media (max-width:534px) {
@@ -198,7 +209,9 @@
   }
 
   .modal-content p.desc {
-    font-size: 10.45px;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: medium;
   }
 
   .form {

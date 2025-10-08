@@ -20,14 +20,10 @@ export default function ProfileLayout({ children }) {
         <div className={styles.layout}>
             <div className={styles.left}>
                 <div className={styles.top}>
-                    <div className={styles.name}>
+                    <div className={styles.name} onClick={() => router.push("/profile/settings")}>
                         <span>{user?.login[0]}</span>
                         <p>{user?.login}</p>
                     </div>
-                    <button onClick={() => router.push("/profile/settings")} className={`${pathname === '/profile/settings' ? styles.active : ""} ${styles.settins_button}`}>
-                        <img src="/assets/icons/settings2.svg" alt="settings icon" />
-                        Настройки
-                    </button>
                     <button onClick={() => {
                         router.push("/profile/control-panel")
                         localStorage.setItem("openServicesModal", true)

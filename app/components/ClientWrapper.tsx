@@ -96,7 +96,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                     </div>
                     {
                         user ? <div className={styles.controls}>
-                            <button className={styles.control_button}>Панель управления</button>
+                            <button onClick={() => router.push('/profile/control-panel')} className={styles.control_button}>Панель управления</button>
                             <button ref={buttonRef} className={styles.name_button} onClick={(e) => {
                                 setOpenControlMenu(prev => !prev)
                                 e.stopPropagation();
@@ -212,7 +212,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                     </div>
                                     {
                                         user ? <div className={styles.controls}>
-                                            <button className={styles.control_button}>Панель управления</button>
+                                            <button onClick={() => router.push('/profile/control-panel')} className={styles.control_button}>Панель управления</button>
                                             <button ref={buttonRef} className={styles.name_button}>Настройки</button>
                                         </div> :
                                             <div className={styles.authButtons}>

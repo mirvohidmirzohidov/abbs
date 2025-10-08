@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import styles from './Modal.module.css';
 
-const Modal = ({ children, onClose, fixed }) => {
+const Modal = ({ children, onClose, fixed, marginTop }) => {
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -15,7 +15,7 @@ const Modal = ({ children, onClose, fixed }) => {
 
     return (
         <div className={`${styles['modal-overlay']} ${fixed ? styles.fixed : ""}`} onClick={onClose}>
-            <div className={styles['modal-content']} onClick={(e) => e.stopPropagation()}>
+            <div style={{ marginTop: marginTop ? marginTop : "" }} className={styles['modal-content']} onClick={(e) => e.stopPropagation()}>
                 {
                     fixed && <button className={styles['close-btn']} onClick={onClose}>
                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
