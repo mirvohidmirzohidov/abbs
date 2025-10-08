@@ -68,7 +68,9 @@ const ServicesModal = ({ onClose, setOpenModal }) => {
           </div>
           <div className={styles.cards}>
             {(category === "all" ? cards5 : cards).map((card, index) => (
-              <Card clickButton={() => setOpenModal(true)} key={index} type="services" servicesPage={true} data={card} />
+              <div key={index} className={styles.card_wrapper}>
+                <Card clickButton={() => setOpenModal(true)} type="services" servicesPage={true} data={card} />
+              </div>
             ))}
           </div>
         </div>

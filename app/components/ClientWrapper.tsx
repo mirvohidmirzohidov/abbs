@@ -72,7 +72,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                             <img className={styles.logo} src="/logo.svg" alt="logo" />
                         </div>
                     </Link>
-                    <div className={styles.nav_links}>
+                    <div className={styles.nav_links} style={{ marginLeft: user ? "275px" : "345px" }}>
                         <Link
                             href="/"
                             className={pathname === "/" ? styles.active : ""}
@@ -213,7 +213,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                     {
                                         user ? <div className={styles.controls}>
                                             <button onClick={() => router.push('/profile/control-panel')} className={styles.control_button}>Панель управления</button>
-                                            <button ref={buttonRef} className={styles.name_button}>Настройки</button>
+                                            <button onClick={() => router.push("/profile/settings")} ref={buttonRef} className={styles.name_button}>Настройки</button>
                                         </div> :
                                             <div className={styles.authButtons}>
                                                 <button onClick={() => {

@@ -1,53 +1,55 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import styles from "./settings.module.css"
+import { useEffect, useState } from "react";
+import styles from "./settings.module.css";
 
 const Settings = () => {
-  const [oldPassword, setOldPassword] = useState("")
-  const [newPassword, setNewPassword] = useState("")
-  const [user, setUser] = useState(null)
+  const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [showOldPassword, setShowOldPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const savedUser = localStorage.getItem("currentUser")
-    if (savedUser) setUser(JSON.parse(savedUser))
+    const savedUser = localStorage.getItem("currentUser");
+    if (savedUser) setUser(JSON.parse(savedUser));
 
     const handleStorageChange = () => {
-      const updatedUser = localStorage.getItem("currentUser")
-      setUser(updatedUser ? JSON.parse(updatedUser) : null)
-    }
+      const updatedUser = localStorage.getItem("currentUser");
+      setUser(updatedUser ? JSON.parse(updatedUser) : null);
+    };
 
-    window.addEventListener("storage", handleStorageChange)
-    return () => window.removeEventListener("storage", handleStorageChange)
-  }, [])
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!oldPassword || !newPassword) {
-      alert("Пожалуйста, заполните все поля!")
-      return
+      alert("Пожалуйста, заполните все поля!");
+      return;
     }
 
     if (oldPassword !== user?.password) {
-      alert("Старый пароль введён неверно!")
-      return
+      alert("Старый пароль введён неверно!");
+      return;
     }
 
-    const updatedUser = { ...user, password: newPassword }
-    localStorage.setItem("currentUser", JSON.stringify(updatedUser))
+    const updatedUser = { ...user, password: newPassword };
+    localStorage.setItem("currentUser", JSON.stringify(updatedUser));
 
-    const users = JSON.parse(localStorage.getItem("users")) || []
+    const users = JSON.parse(localStorage.getItem("users")) || [];
     const updatedUsers = users.map((u) =>
       u.email === user?.email ? updatedUser : u
-    )
-    localStorage.setItem("users", JSON.stringify(updatedUsers))
+    );
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
 
-    setUser(updatedUser)
-    setOldPassword("")
-    setNewPassword("")
-    alert("Пароль успешно изменён!")
-  }
+    setUser(updatedUser);
+    setOldPassword("");
+    setNewPassword("");
+    alert("Пароль успешно изменён!");
+  };
 
   return (
     <div className={styles.settings}>
@@ -67,30 +69,50 @@ const Settings = () => {
 
         <div className={styles.item}>
           <h4>Смена пароля</h4>
+
           <label>
             Старый пароль <br />
-            <input
-              type="password"
-              placeholder="Введите старый пароль"
-              value={oldPassword}
-              onChange={(e) => setOldPassword(e.target.value)}
-            />
+            <div className={styles.input_wrapper}>
+              <input
+                type={showOldPassword ? "text" : "password"}
+                placeholder="Введите старый пароль"
+                value={oldPassword}
+                onChange={(e) => setOldPassword(e.target.value)}
+              />
+              <span onClick={() => setShowOldPassword(!showOldPassword)}>
+                {showOldPassword ? (
+                  <img src="/assets/icons/eye_off.svg" alt="eye" />
+                ) : (
+                  <img src="/assets/icons/eye.svg" alt="eye" />
+                )}
+              </span>
+            </div>
           </label>
+
           <label>
             Новый пароль <br />
-            <input
-              type="password"
-              placeholder="Введите новый пароль"
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
-            />
+            <div className={styles.input_wrapper}>
+              <input
+                type={showNewPassword ? "text" : "password"}
+                placeholder="Введите новый пароль"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+              />
+              <span onClick={() => setShowNewPassword(!showNewPassword)}>
+                {showNewPassword ? (
+                  <img src="/assets/icons/eye_off.svg" alt="eye" />
+                ) : (
+                  <img src="/assets/icons/eye.svg" alt="eye" />
+                )}
+              </span>
+            </div>
           </label>
         </div>
 
         <button type="submit">Сменить пароль</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Settings
+export default Settings;

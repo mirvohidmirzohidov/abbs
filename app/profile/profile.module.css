@@ -6,7 +6,7 @@
     display: flex;
     gap: 22px;
     padding: 11px 10px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .left {
@@ -144,11 +144,10 @@
 
 .right {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background: linear-gradient(137.01deg, #16150E 0.62%, #000000 75.86%);
     border: 1px solid #171717;
     border-radius: 16px;
-    overflow: auto;
 }
 
 .right::-webkit-scrollbar {
@@ -550,5 +549,6 @@
         justify-content: center;
         align-items: center;
         padding: 0 15px;
+        padding-bottom: 20px;
     }
 }

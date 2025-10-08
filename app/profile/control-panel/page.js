@@ -3,10 +3,10 @@
 import Card from "../card"
 import ServicesModal from "../services_modal/services_modal"
 import services from "../data/services.json"
-import styles from "../profile.module.css"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import modal from "../Alert/alert"
+import styles from "../profile.module.css"
 
 const ControlPanel = () => {
   const [opeModal, setOpenModal] = useState(false)

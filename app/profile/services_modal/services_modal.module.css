@@ -18,6 +18,7 @@
     border: 1px solid #383839;
     border-radius: 21px;
     display: flex;
+    overflow: hidden;
 }
 
 .left {
@@ -136,8 +137,8 @@
 
 .close_btn {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
 }
 
@@ -181,7 +182,7 @@
 @media (max-width:650px) {
     .modal_content {
         flex-direction: column;
-        height: 95%;
+        height: 100%;
     }
 
     .left {
@@ -209,6 +210,7 @@
     }
 
     .cards {
+        padding: 7px;
         padding-bottom: 220px;
     }
 }

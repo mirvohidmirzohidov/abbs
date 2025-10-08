@@ -45,7 +45,6 @@
  }
 
  .nav_links {
-   margin-left: 90px;
    display: flex;
    align-items: center;
    gap: 30px;
@@ -88,10 +87,10 @@
    position: relative;
  }
 
- .burger_menu, 
+ .burger_menu,
  .burger_menu button,
  .burger_menu a {
-  outline: none;
+   outline: none;
  }
 
  .navbar button {
@@ -125,7 +124,7 @@
    width: 39px !important;
    background-color: #252525 !important;
    color: white !important;
-   text-transform: uppercase;
+   text-transform: capitalize;
    font-size: 20px !important;
    border: 1px solid #313131 !important;
  }
@@ -138,7 +137,7 @@
    border: 1px solid #323233;
    background-color: #191919;
    border-radius: 8px;
-   animation: slideRight 0.4s ease;
+   animation: slideUp2 0.4s ease;
  }
 
  .control_menu_item {
@@ -211,9 +210,9 @@
  .control_menu_item:not(:last-child) a:hover {
    background-color: rgba(255, 255, 255, 0.1);
  }
- 
+
  .control_menu_item:last-child a:hover {
-   background-color: rgba(255, 0, 0, 0.2) 
+   background-color: rgba(255, 0, 0, 0.2)
  }
 
  .control_menu_item:last-child a {
@@ -758,16 +757,17 @@
    }
  }
 
- @keyframes slideRight {
-   from {
-     right: -300px;
+ @keyframes slideUp2 {
+   0% {
+     opacity: 0;
+     transform: translateY(-20px);
    }
 
-   to {
-     right: 0;
+   100% {
+     opacity: 1;
+     transform: translateY(0);
    }
  }
-
 
  .cardsWrapper {
    display: flex;
