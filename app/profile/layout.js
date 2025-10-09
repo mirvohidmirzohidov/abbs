@@ -1,8 +1,8 @@
 "use client"
 
 import { usePathname, useRouter } from "next/navigation"
-import styles from "./profile.module.css"
 import { useEffect, useState } from "react"
+import styles from "./profile.module.css"
 
 export default function ProfileLayout({ children }) {
     const pathname = usePathname()
@@ -24,6 +24,10 @@ export default function ProfileLayout({ children }) {
                         <span>{user?.login[0]}</span>
                         <p>{user?.login}</p>
                     </div>
+                    <button  onClick={() => router.push("/profile/settings")} className={`${pathname === '/profile/settings' ? styles.active : ""} ${styles.settins_button}`}>
+                        <img src="/assets/icons/settings2.svg" alt="settings icon" />
+                        Настройки
+                    </button>
                     <button onClick={() => {
                         router.push("/profile/control-panel")
                         localStorage.setItem("openServicesModal", true)

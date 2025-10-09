@@ -1,12 +1,16 @@
 .layout {
-    max-width: 1440px;
-    width: 100%;
+    /* max-width: 1440px; */
+    width: 95%;
     margin: 0 auto;
     height: calc(100vh - 64px);
     display: flex;
     gap: 22px;
     padding: 11px 10px;
     overflow-x: hidden;
+}
+
+.layout::-webkit-scrollbar{
+    display: none;
 }
 
 .left {
@@ -44,6 +48,7 @@
     gap: 10px;
     color: white;
     cursor: pointer;
+    transition: 0.3s ease transform;
 }
 
 .left .top .name span {
@@ -87,6 +92,16 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+    transition: 0.3s ease transform;
+}
+
+.left .top .name:hover,
+.left .top button:hover {
+    transform: scale(1.02);
+}
+
+.left .top .settins_button {
+    display: none;
 }
 
 .left .top button img {
@@ -148,6 +163,7 @@
     background: linear-gradient(137.01deg, #16150E 0.62%, #000000 75.86%);
     border: 1px solid #171717;
     border-radius: 16px;
+    overflow: auto;
 }
 
 .right::-webkit-scrollbar {
@@ -252,11 +268,11 @@
     color: #1C1C1C;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.2s ease transform;
+    transition: 0.3s ease transform;
 }
 
 .card button:hover {
-    transform: scale(1.03);
+    transform: scale(1.015);
 }
 
 .modal {
@@ -274,13 +290,13 @@
 }
 
 .modal_content {
-    width: 341px;
-    height: 546px;
+    width: 365px;
+    height: 575px;
     background: linear-gradient(170.91deg, #0C0C09 2.63%, #090B0C 93.1%);
     border: 1px solid #383839;
     border-radius: 21px;
     position: relative;
-    padding: 25px;
+    padding: 25px 20px;
 }
 
 .modal_top .close_btn {
@@ -306,13 +322,13 @@
 
 .choose_month {
     width: 100%;
-    height: 46px;
+    height: 50px;
     background-color: #151718;
     border-radius: 14px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    margin-top: 13px;
+    margin-top: 15px;
 }
 
 .choose_month .month {
@@ -346,7 +362,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-top: 15px;
 }
 
@@ -451,7 +467,7 @@
     line-height: 12px;
     color: #7C7D84;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .modal_content label span {
@@ -478,14 +494,16 @@
 }
 
 .modal_content label input:checked::after {
-    content: "\2714";
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
+    content: "";
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
+    width: 15px;
+    height: 15px;
     transform: translate(-50%, -50%);
+    background-image: url("/assets/galochka.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .modal_content button {
@@ -494,7 +512,7 @@
     background-color: #E4EB24;
     border: none;
     border-radius: 14px;
-    margin-top: 12px;
+    margin-top: 15px;
     color: #1C1C1C;
     font-size: 14px;
     font-weight: 600;
@@ -535,6 +553,10 @@
         padding: 0;
     }
 
+    .left .top .settins_button {
+        display: flex;
+    }
+
     .left .bottom {
         display: none;
     }
@@ -543,6 +565,7 @@
         background: transparent;
         border: none;
         border-radius: 0;
+        overflow: unset;
     }
 
     .control_panel {
@@ -550,5 +573,12 @@
         align-items: center;
         padding: 0 15px;
         padding-bottom: 20px;
+    }
+
+    .buy_service:hover,
+    .card:not(.card_selection .card):hover {
+        transform: none;
+        box-shadow: none;
+        border-color: #FFFFFF80;
     }
 }

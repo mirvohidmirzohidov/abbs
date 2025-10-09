@@ -14,7 +14,7 @@ const Modal = ({ children, onClose, fixed, marginTop }) => {
 
 
     return (
-        <div className={`${styles['modal-overlay']} ${fixed ? styles.fixed : ""}`} onClick={onClose}>
+        <div className={`${styles['modal-overlay']} ${fixed ? styles.fixed : ""}`}>
             <div style={{ marginTop: marginTop ? marginTop : "" }} className={styles['modal-content']} onClick={(e) => e.stopPropagation()}>
                 {
                     fixed && <button className={styles['close-btn']} onClick={onClose}>

@@ -17,14 +17,26 @@ const ControlPanel = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(null)
 
-useEffect(() => {
-  if (typeof window !== "undefined") {
-    setOpenModal(false)
-    setOpenServicesModal(false)
-    const open = localStorage.getItem("openServicesModal")
-    setIsOpen(open)
-  }
-}, [pathname])
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setOpenModal(false)
+      setOpenServicesModal(false)
+      const open = localStorage.getItem("openServicesModal")
+      setIsOpen(open)
+    }
+  }, [pathname])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const open = localStorage.getItem("openServicesModal");
+      if (open) {
+        setOpenServicesModal(true);
+        localStorage.removeItem("openServicesModal");
+      }
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
 
 
   useEffect(() => {

@@ -73,24 +73,28 @@
  }
 
  .authButtons button:first-child:hover {
-   transform: scale(1.08);
+   transform: scale(1.03);
    background-color: #333;
    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
  }
 
  .burger_menu {
-   cursor: pointer;
    display: flex;
    align-items: center;
    gap: 9.53px;
    color: white;
    position: relative;
+   outline: none;
+   user-select: none;
+   box-shadow: none;
  }
 
- .burger_menu,
- .burger_menu button,
- .burger_menu a {
-   outline: none;
+ .burger_menu svg {
+   cursor: pointer;
+ }
+
+ .burger_menu * {
+   -webkit-tap-highlight-color: transparent;
  }
 
  .navbar button {
@@ -106,7 +110,7 @@
  }
 
  .navbar button:hover {
-   transform: scale(1.08);
+   transform: scale(1.03);
    background-color: #fff700;
  }
 
@@ -142,7 +146,7 @@
 
  .control_menu_item {
    width: 100%;
-   padding: 10px 13px;
+   padding: 10px 9px;
    border-bottom: 1px solid #323233;
    display: flex;
    flex-direction: column;
@@ -203,7 +207,7 @@
    font-weight: 500;
    line-height: 16px;
    cursor: pointer;
-   padding: 5px 1px;
+   padding: 5px;
    border-radius: 5px;
  }
 
