@@ -232,6 +232,6 @@
 
     .cards {
         padding: 7px;
-        padding-bottom: 220px;
+        /* padding-bottom: 220px; */
     }
 }
