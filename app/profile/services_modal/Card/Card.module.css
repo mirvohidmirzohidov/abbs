@@ -122,6 +122,11 @@
     min-height: 405px !important;
   }
 
+  .card.servicesCard:hover {
+    border: 1px solid var(--color141413);
+    transform: scale(1);
+  }
+
   .cardImgWrapper {
     width: 80px;
     height: 80px;

@@ -33,7 +33,7 @@ const ControlPanel = () => {
         setOpenServicesModal(true);
         localStorage.removeItem("openServicesModal");
       }
-    }, 500);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
