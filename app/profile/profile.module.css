@@ -49,6 +49,7 @@
     color: white;
     cursor: pointer;
     transition: 0.3s ease transform;
+    margin: 0;
 }
 
 .left .top .name span {
@@ -81,8 +82,6 @@
 .left .top button {
     width: 100%;
     height: 46px;
-    margin-top: 10px;
-    padding-left: 20px;
     background-color: #E4EB24;
     border: 1px solid #252525;
     display: flex;
@@ -92,7 +91,10 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+    margin: 0;
     transition: 0.3s ease transform;
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
 .left .top .name:hover,
