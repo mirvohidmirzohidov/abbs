@@ -1,0 +1,164 @@
+.card {
+  max-width: 325px;
+  width: 100%;
+  height: 498px;
+  background-color: var(--color141413);
+  border-radius: 20px;
+  padding: 20px 25px;
+  transition: 0.3s;
+  border: 1px solid var(--color141413);
+  display: flex;
+  flex-direction: column;
+}
+
+.card.servicesCard:hover {
+  border: 1px solid #3e3e40;
+  transform: scale(1.02);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cardImgWrapper {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.padding0 {
+  padding: 0 !important;
+}
+
+.cardDiscount {
+  width: 88px;
+  padding: 4px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #ff0000;
+  font-size: 10px;
+  font-weight: 900;
+  color: white;
+}
+
+.cardPrice {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+}
+
+.cardOldPrice {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: line-through red;
+  margin-top: -7px;
+  color: white;
+}
+
+.cardTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.cardText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #626263;
+  margin-top: 0;
+}
+
+.cardInfo {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color989899);
+  padding-top: 13px;
+  margin-top: 19px;
+  border-top: 2px solid #202020;
+}
+
+.serviceP {
+  font-size: 12.1px;
+  line-height: 17.59px;
+}
+
+.buttonsWrapper {
+  margin-top: auto;
+}
+
+.card button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #1d1d1c;
+  border: none;
+  border-radius: 15px;
+  margin-top: 26px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.card .servicesCardBUtton {
+  background-color: #f0f000;
+  margin-top: 8px;
+  color: #1c1c1c;
+}
+
+@media (max-width:700px) {
+  .card {
+    max-height: 405px !important;
+    min-height: 405px !important;
+  }
+
+  .cardImgWrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cardDiscount {
+    width: 78px;
+    padding: 3px;
+    font-size: 9px;
+  }
+
+  .cardPrice {
+    font-size: 28.81px;
+  }
+
+  .cardOldPrice {
+    font-size: 19.37px;
+  }
+
+  .cardTitle {
+    font-size: 28.68px;
+  }
+
+  .cardText {
+    font-size: 12.55px;
+  }
+
+  .cardInfo {
+    font-size: 9.86px;
+    font-weight: 400;
+    line-height: 14.34px;
+    color: var(--color989899);
+    padding-top: 10px;
+    margin-top: 12px;
+  }
+
+  .card button {
+    padding: 13px 0;
+  }
+}

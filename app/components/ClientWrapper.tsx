@@ -31,6 +31,10 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
         const handleStorageChange = () => {
             const updatedUser = localStorage.getItem("currentUser");
             setUser(updatedUser ? JSON.parse(updatedUser) : null);
+            const openMOdal = localStorage.getItem('openServicesModal')
+            if (openMOdal) {
+                setOpenControlMenu(false)
+            }
         };
 
         window.addEventListener("storage", handleStorageChange);
@@ -165,7 +169,10 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
                                 </div>
                                 <div className={styles.control_menu_item}>
                                     <Link href="/profile/control-panel"><img src="/assets/icons/control.svg" alt="control icon" />Панель управления подписками</Link>
-                                    <Link href="/"><img src="/assets/icons/cart.svg" alt="cart icon" />Купить сервис</Link>
+                                    <Link href="/profile/control-panel" onClick={() => {
+                                        localStorage.setItem("openServicesModal", "true")
+                                        // setOpenControlMenu(false)
+                                        }}><img src="/assets/icons/cart.svg" alt="cart icon" />Купить сервис</Link>
                                 </div>
                                 <div className={styles.control_menu_item}>
                                     <Link href="/profile/settings"><img src="/assets/icons/settings.svg" alt="settings icon" />Настройки</Link>

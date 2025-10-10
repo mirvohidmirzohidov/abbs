@@ -4,7 +4,7 @@ import styles from "./services_modal.module.css"
 import categories from "../data/categories.json"
 import { cards5 } from "../../data/cards"
 import { useState } from "react"
-import Card from "../../components/card/Card"
+import ServiceCard from "./Card/Card"
 
 const ServicesModal = ({ onClose, setOpenModal }) => {
   const [category, setCategory] = useState("all")
@@ -70,7 +70,7 @@ const ServicesModal = ({ onClose, setOpenModal }) => {
           <div className={styles.cards}>
             {(category === "all" ? cards5 : cards).map((card, index) => (
               <div key={index} className={styles.card_wrapper}>
-                <Card clickButton={() => setOpenModal(true)} type="services" servicesPage={true} data={card} />
+                <ServiceCard clickButton={() => setOpenModal(true)} type="services" servicesPage={true} data={card} />
               </div>
             ))}
           </div>
