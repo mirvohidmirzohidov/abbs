@@ -118,8 +118,8 @@
 
 @media (max-width:700px) {
   .card {
-    max-height: 405px !important;
-    min-height: 405px !important;
+    max-height: 410px !important;
+    min-height: 410px !important;
   }
 
   .card.servicesCard:hover {
