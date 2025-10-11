@@ -219,7 +219,7 @@
 
 .card {
     width: 345px;
-    height: 186px;
+    min-height: 186px;
     background-color: #262626;
     border: 1.44px solid #FFFFFF80;
     border-radius: 28.76px;
@@ -329,8 +329,10 @@
 .modal_top span {
     font-size: 12px;
     font-weight: 400;
+    display: block;
     line-height: 16px;
     color: #7C7D84;
+    margin-top: 3px;
 }
 
 .choose_month {
@@ -569,6 +571,18 @@
 
     .left .top .settins_button {
         display: flex;
+    }
+
+    .left .top button:hover {
+        background-color: #E4EB24;
+    }
+
+    .left .top .settins_button:hover {
+        background-color: #1A1A1A;
+    }
+
+    .left .top .name:hover {
+        background-color: transparent;
     }
 
     .left .bottom {
