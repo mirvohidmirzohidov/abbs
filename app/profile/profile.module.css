@@ -9,7 +9,7 @@
     overflow-x: hidden;
 }
 
-.layout::-webkit-scrollbar{
+.layout::-webkit-scrollbar {
     display: none;
 }
 
@@ -48,8 +48,9 @@
     gap: 10px;
     color: white;
     cursor: pointer;
-    transition: 0.3s ease transform;
     margin: 0;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
 .left .top .name span {
@@ -92,14 +93,18 @@
     font-size: 14px;
     font-weight: 600;
     margin: 0;
-    transition: 0.3s ease transform;
     margin-top: 10px;
     padding-left: 20px;
+    position: relative;
+    transition: 0.3s ease transform;
 }
 
-.left .top .name:hover,
 .left .top button:hover {
-    transform: scale(1.02);
+    background-color: #c0c700;
+}
+
+.left .top .name:hover {
+    background-color: #252525;
 }
 
 .left .top .settins_button {
@@ -270,12 +275,14 @@
     color: #1C1C1C;
     font-size: 16px;
     font-weight: 600;
-    transition: 0.3s ease transform;
+    transition: all 0.3s ease;
 }
 
 .card button:hover {
-    transform: scale(1.015);
+    background-color: #dddddd;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 .modal {
     width: 100vw;
@@ -302,7 +309,7 @@
 }
 
 .modal_content * {
-     -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .modal_top .close_btn {
