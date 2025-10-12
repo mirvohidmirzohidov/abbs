@@ -247,6 +247,7 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
 
             {
                 pathname.split('/')[1] !== "reset-password" &&
+                pathname.split('/')[1] !== "confirmation" &&
                 pathname.split('/')[1] !== "profile" && (
                     <Footer
                         className={`${pathname === "/download" ? styles.footerDownload : ""} ${inter.className}`}
