@@ -221,7 +221,7 @@
     line-height: 100%;
 }
 
-.card {
+.card:not(.modal_content .card) {
     width: 345px;
     min-height: 186px;
     background-color: #262626;
