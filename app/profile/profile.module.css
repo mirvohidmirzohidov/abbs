@@ -115,6 +115,10 @@
     width: 20px;
 }
 
+.left .top * {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .left .bottom {
     margin-top: 25px;
     flex: 1;
