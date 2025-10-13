@@ -9,7 +9,8 @@ import modal from "../Alert/alert"
 import styles from "../profile.module.css"
 
 const ControlPanel = () => {
-  const [opeModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
+  const [openTelegramModal, setOpenTelegramModal] = useState(false)
   const [month, setMonth] = useState(1)
   const [activeCard, setActiveCard] = useState(1)
   const [openServicesModal, setOpenServicesModal] = useState(false)
@@ -49,8 +50,8 @@ const ControlPanel = () => {
   return (
     <div className={styles.control_panel}>
       {
-        services.slice(0, 4).map(item => (
-          <Card setProduct={setProduct} onBuy={() => setOpenModal(true)} key={item.id} product={item} />
+        services.slice(0, 5).map(item => (
+          <Card setProduct={setProduct} onBuy={() => item.name === "Claude AI"? setOpenTelegramModal(true) : setOpenModal(true)} key={item.id} product={item} />
         ))
       }
       <div className={styles.buy_service} onClick={() => setOpenServicesModal(true)}>
@@ -60,7 +61,7 @@ const ControlPanel = () => {
       </div>
 
       {
-        opeModal && (
+        openModal && (
           <div className={styles.modal} onClick={() => setOpenModal(false)}>
             <div className={styles.modal_content} onClick={(e) => e.stopPropagation()}>
               <div className={styles.modal_top}>
@@ -138,6 +139,45 @@ const ControlPanel = () => {
                 )
                 setOpenModal(false)
               }}>Оплатить</button>
+            </div>
+          </div>
+        )
+      }
+      {
+        openTelegramModal && (
+          <div className={styles.modal} onClick={() => setOpenTelegramModal(false)}>
+            <div className={`${styles.modal_content} ${styles.telegramModal}`} onClick={(e) => e.stopPropagation()}>
+              <div className={styles.modal_top}>
+                <span className={styles.close_btn} onClick={() => setOpenTelegramModal(false)}>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.64 8.00051L15.5898 3.0507C16.1367 2.50379 16.1367 1.61713 15.5898 1.07108L14.9299 0.411203C14.3829 -0.135871 13.4962 -0.135871 12.9502 0.411203L8.00051 5.36085L3.0507 0.410178C2.50379 -0.136726 1.61713 -0.136726 1.07108 0.410178L0.410178 1.07005C-0.136726 1.61713 -0.136726 2.50379 0.410178 3.04984L5.36085 8.00051L0.411203 12.9502C-0.135871 13.4972 -0.135871 14.3839 0.411203 14.9299L1.07108 15.5898C1.61798 16.1367 2.50465 16.1367 3.0507 15.5898L8.00051 10.64L12.9502 15.5898C13.4972 16.1367 14.3839 16.1367 14.9299 15.5898L15.5898 14.9299C16.1367 14.3829 16.1367 13.4962 15.5898 12.9502L10.64 8.00051Z" fill="#6B6D6E" />
+                  </svg>
+                </span>
+                <p>Период</p>
+                <span>Выберите период на который желаете оформить доступ</span>
+                <div className={styles.choose_month}>
+                  <div onClick={() => setMonth(1)} className={`${styles.month} ${month === 1 ? styles.active : ""}`}>1 Месяц</div>
+                  <div onClick={() => setMonth(2)} className={`${styles.month} ${month === 2 ? styles.active : ""}`}>2 Месяц</div>
+                </div>
+              </div>
+              <div className={styles.card_selection}>
+                <p>Выберите способ оплаты</p>
+                <div className={styles.cards}>
+                  <div className={`${styles.card} ${styles.active}`}>
+                    <div className={styles.text}>
+                      <p>Telegram</p>
+                      <span>Оплата данного сервиса возможна через администратора @AbbsNet_Support</span>
+                    </div>
+                    <div className={styles.icon}>
+                      <img src="/assets/icons/telegram_icon.svg" alt="icon" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button onClick={() => {
+                window.open('https://t.me/m/OPtFWb2_ODky', '__blank')
+                setOpenTelegramModal(false)
+                }}>Оплатить через администратора</button>
             </div>
           </div>
         )
